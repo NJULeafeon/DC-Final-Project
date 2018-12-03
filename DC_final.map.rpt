@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DC_final
-Mon Dec 03 12:43:29 2018
+Mon Dec 03 14:07:07 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -26,32 +26,28 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  18. Source assignments for exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated
  19. Source assignments for exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated
  20. Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c
- 21. Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c4
- 22. Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c2
- 23. Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c3
- 24. Parameter Settings for User Entity Instance: exp09:comb_3|vga_ctrl:v
- 25. Parameter Settings for User Entity Instance: exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component
- 28. Parameter Settings for Inferred Entity Instance: exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0
- 29. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Mod0
- 30. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Div0
- 31. altsyncram Parameter Settings by Entity Instance
- 32. Port Connectivity Checks: "light:l2"
- 33. Port Connectivity Checks: "light:l"
- 34. Port Connectivity Checks: "exp08:comb_4|ps2_keyboard:p"
- 35. Port Connectivity Checks: "exp08:comb_4"
- 36. Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"
- 37. Port Connectivity Checks: "exp09:comb_3|vga_ctrl:v"
- 38. Port Connectivity Checks: "exp09:comb_3|clkgen:c3"
- 39. Port Connectivity Checks: "exp09:comb_3|clkgen:c2"
- 40. Port Connectivity Checks: "exp09:comb_3|clkgen:c4"
- 41. Port Connectivity Checks: "exp09:comb_3|clkgen:c"
- 42. Port Connectivity Checks: "exp09:comb_3"
- 43. Post-Synthesis Netlist Statistics for Top Partition
- 44. Elapsed Time Per Partition
- 45. Analysis & Synthesis Messages
- 46. Analysis & Synthesis Suppressed Messages
+ 21. Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c2
+ 22. Parameter Settings for User Entity Instance: exp09:comb_3|vga_ctrl:v
+ 23. Parameter Settings for User Entity Instance: exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component
+ 26. Parameter Settings for Inferred Entity Instance: exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Div0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "light:l2"
+ 31. Port Connectivity Checks: "light:l"
+ 32. Port Connectivity Checks: "exp08:comb_4|ps2_keyboard:p"
+ 33. Port Connectivity Checks: "exp08:comb_4"
+ 34. Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"
+ 35. Port Connectivity Checks: "exp09:comb_3|vga_ctrl:v"
+ 36. Port Connectivity Checks: "exp09:comb_3|clkgen:c2"
+ 37. Port Connectivity Checks: "exp09:comb_3|clkgen:c"
+ 38. Port Connectivity Checks: "exp09:comb_3"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -77,13 +73,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 03 12:43:29 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 03 14:07:07 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DC_final                                    ;
 ; Top-level Entity Name           ; DC_final                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 158                                         ;
+; Total registers                 ; 189                                         ;
 ; Total pins                      ; 168                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 53,728                                      ;
@@ -189,59 +185,59 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; vga_ctrl.v                       ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/vga_ctrl.v                                   ;         ;
-; rom_font.v                       ; yes             ; User Wizard-Generated File             ; E:/14A/digital circuit/DC_final/rom_font.v                                   ;         ;
-; rom_ascii.v                      ; yes             ; User Wizard-Generated File             ; E:/14A/digital circuit/DC_final/rom_ascii.v                                  ;         ;
-; ram3.v                           ; yes             ; User Wizard-Generated File             ; E:/14A/digital circuit/DC_final/ram3.v                                       ;         ;
-; ps2_keyboard.v                   ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/ps2_keyboard.v                               ;         ;
-; light.v                          ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/light.v                                      ;         ;
-; exp09.v                          ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/exp09.v                                      ;         ;
-; exp08.v                          ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/exp08.v                                      ;         ;
-; DC_final.v                       ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/DC_final.v                                   ;         ;
-; clkgen.v                         ; yes             ; User Verilog HDL File                  ; E:/14A/digital circuit/DC_final/clkgen.v                                     ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_tqm2.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/altsyncram_tqm2.tdf                       ;         ;
-; vga_init_i386.mif                ; yes             ; Auto-Found Memory Initialization File  ; E:/14A/digital circuit/DC_final/vga_init_i386.mif                            ;         ;
-; db/altsyncram_e8h1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/altsyncram_e8h1.tdf                       ;         ;
-; font.mif                         ; yes             ; Auto-Found Memory Initialization File  ; E:/14A/digital circuit/DC_final/font.mif                                     ;         ;
-; db/altsyncram_lhh1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf                       ;         ;
-; scancode.mif                     ; yes             ; Auto-Found Memory Initialization File  ; E:/14A/digital circuit/DC_final/scancode.mif                                 ;         ;
-; db/altsyncram_lsj1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/altsyncram_lsj1.tdf                       ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; e:/instruments/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_h3m.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/lpm_divide_h3m.tdf                        ;         ;
-; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/sign_div_unsign_klh.tdf                   ;         ;
-; db/alt_u_div_eve.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/alt_u_div_eve.tdf                         ;         ;
-; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/lpm_divide_ibm.tdf                        ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/sign_div_unsign_olh.tdf                   ;         ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/14A/digital circuit/DC_final/db/alt_u_div_mve.tdf                         ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
+; vga_ctrl.v                       ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/vga_ctrl.v                        ;         ;
+; rom_font.v                       ; yes             ; User Wizard-Generated File             ; E:/DigitalCurcuitLab/DC-Final-Project/rom_font.v                        ;         ;
+; rom_ascii.v                      ; yes             ; User Wizard-Generated File             ; E:/DigitalCurcuitLab/DC-Final-Project/rom_ascii.v                       ;         ;
+; ram3.v                           ; yes             ; User Wizard-Generated File             ; E:/DigitalCurcuitLab/DC-Final-Project/ram3.v                            ;         ;
+; ps2_keyboard.v                   ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/ps2_keyboard.v                    ;         ;
+; light.v                          ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/light.v                           ;         ;
+; exp09.v                          ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/exp09.v                           ;         ;
+; exp08.v                          ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/exp08.v                           ;         ;
+; DC_final.v                       ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v                        ;         ;
+; clkgen.v                         ; yes             ; User Verilog HDL File                  ; E:/DigitalCurcuitLab/DC-Final-Project/clkgen.v                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_tqm2.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_tqm2.tdf            ;         ;
+; vga_init_i386.mif                ; yes             ; Auto-Found Memory Initialization File  ; E:/DigitalCurcuitLab/DC-Final-Project/vga_init_i386.mif                 ;         ;
+; db/altsyncram_e8h1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_e8h1.tdf            ;         ;
+; font.mif                         ; yes             ; Auto-Found Memory Initialization File  ; E:/DigitalCurcuitLab/DC-Final-Project/font.mif                          ;         ;
+; db/altsyncram_lhh1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf            ;         ;
+; scancode.mif                     ; yes             ; Auto-Found Memory Initialization File  ; E:/DigitalCurcuitLab/DC-Final-Project/scancode.mif                      ;         ;
+; db/altsyncram_lsj1.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lsj1.tdf            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; e:/intelfpga/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_h3m.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_h3m.tdf             ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_klh.tdf        ;         ;
+; db/alt_u_div_eve.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_eve.tdf              ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_ibm.tdf             ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_olh.tdf        ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_mve.tdf              ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -249,16 +245,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 245            ;
+; Estimate of Logic utilization (ALMs needed) ; 262            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 442            ;
+; Combinational ALUT usage for logic          ; 468            ;
 ;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 43             ;
-;     -- 5 input functions                    ; 39             ;
-;     -- 4 input functions                    ; 98             ;
-;     -- <=3 input functions                  ; 259            ;
+;     -- 6 input functions                    ; 50             ;
+;     -- 5 input functions                    ; 44             ;
+;     -- 4 input functions                    ; 100            ;
+;     -- <=3 input functions                  ; 271            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 158            ;
+; Dedicated logic registers                   ; 189            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 168            ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -268,8 +264,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 121            ;
-; Total fan-out                               ; 2507           ;
-; Average fan-out                             ; 2.54           ;
+; Total fan-out                               ; 2740           ;
+; Average fan-out                             ; 2.63           ;
 +---------------------------------------------+----------------+
 
 
@@ -278,12 +274,12 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |DC_final                                    ; 442 (1)             ; 158 (0)                   ; 53728             ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
+; |DC_final                                    ; 468 (1)             ; 189 (0)                   ; 53728             ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
 ;    |exp08:comb_4|                            ; 67 (20)             ; 57 (18)                   ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4                                                                                                 ; exp08               ; work         ;
 ;       |ps2_keyboard:p|                       ; 47 (47)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p                                                                                  ; ps2_keyboard        ; work         ;
 ;          |altsyncram:fifo_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0                                                            ; altsyncram          ; work         ;
 ;             |altsyncram_lsj1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated                             ; altsyncram_lsj1     ; work         ;
-;    |exp09:comb_3|                            ; 360 (44)            ; 101 (15)                  ; 53664             ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
+;    |exp09:comb_3|                            ; 386 (70)            ; 132 (46)                  ; 53664             ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
 ;       |clkgen:c2|                            ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c2                                                                                       ; clkgen              ; work         ;
 ;       |clkgen:c|                             ; 43 (43)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c                                                                                        ; clkgen              ; work         ;
 ;       |lpm_divide:Div0|                      ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -346,9 +342,8 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; exp09:comb_3|ascii[1..4,7]            ; Stuck at GND due to stuck port data_in ;
-; exp09:comb_3|ascii[5,6]               ; Merged with exp09:comb_3|ascii[0]      ;
-; Total Number of Removed Registers = 7 ;                                        ;
+; exp09:comb_3|ascii[2..5,7]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -357,12 +352,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 158   ;
+; Total registers                              ; 189   ;
 ; Number of registers using Synchronous Clear  ; 81    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Clock Enable       ; 68    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -373,9 +368,13 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; exp08:comb_4|flag                      ; 2       ;
-; exp09:comb_3|pos[2]                    ; 2       ;
-; exp09:comb_3|pos[4]                    ; 2       ;
-; Total number of inverted registers = 3 ;         ;
+; exp09:comb_3|valid_fall[0]             ; 5       ;
+; exp09:comb_3|valid_fall[1]             ; 6       ;
+; exp09:comb_3|pos[0][2]                 ; 2       ;
+; exp09:comb_3|pos[1][3]                 ; 2       ;
+; exp09:comb_3|pos[0][4]                 ; 2       ;
+; exp09:comb_3|pos[1][5]                 ; 2       ;
+; Total number of inverted registers = 7 ;         ;
 +----------------------------------------+---------+
 
 
@@ -407,7 +406,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DC_final|exp09:comb_3|vga_ctrl:v|y_cnt[2] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DC_final|exp09:comb_3|vga_ctrl:v|y_cnt[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DC_final|exp09:comb_3|counter[1]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -459,34 +459,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c4 ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; clk_freq       ; 5000  ; Signed Integer                             ;
-; countlimit     ; 5000  ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c2 ;
 +----------------+---------+------------------------------------------+
 ; Parameter Name ; Value   ; Type                                     ;
 +----------------+---------+------------------------------------------+
 ; clk_freq       ; 10      ; Signed Integer                           ;
 ; countlimit     ; 2500000 ; Signed Integer                           ;
-+----------------+---------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp09:comb_3|clkgen:c3 ;
-+----------------+---------+------------------------------------------+
-; Parameter Name ; Value   ; Type                                     ;
-+----------------+---------+------------------------------------------+
-; clk_freq       ; 20      ; Signed Integer                           ;
-; countlimit     ; 1250000 ; Signed Integer                           ;
 +----------------+---------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -888,17 +866,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"                                                                  ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; address_b[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data_a       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; wren_a       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; wren_b       ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q_b          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; data_a ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wren_a ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wren_b ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q_b    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -910,17 +887,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp09:comb_3|clkgen:c3"                                                               ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; rst    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; clken  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; clkout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------+
 ; Port Connectivity Checks: "exp09:comb_3|clkgen:c2" ;
 +-------+-------+----------+-------------------------+
@@ -929,17 +895,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; rst   ; Input ; Info     ; Stuck at GND            ;
 ; clken ; Input ; Info     ; Stuck at VCC            ;
 +-------+-------+----------+-------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp09:comb_3|clkgen:c4"                                                               ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; rst    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; clken  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; clkout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------+
@@ -966,35 +921,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 158                         ;
-;     ENA               ; 20                          ;
+; arriav_ff             ; 189                         ;
+;     ENA               ; 51                          ;
 ;     ENA SCLR          ; 17                          ;
 ;     SCLR              ; 64                          ;
 ;     plain             ; 57                          ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 446                         ;
-;     arith             ; 233                         ;
-;         0 data inputs ; 19                          ;
-;         1 data inputs ; 135                         ;
+; arriav_lcell_comb     ; 472                         ;
+;     arith             ; 234                         ;
+;         0 data inputs ; 20                          ;
+;         1 data inputs ; 124                         ;
 ;         2 data inputs ; 20                          ;
-;         3 data inputs ; 10                          ;
+;         3 data inputs ; 21                          ;
 ;         4 data inputs ; 49                          ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 210                         ;
+;     normal            ; 235                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 49                          ;
-;         5 data inputs ; 39                          ;
-;         6 data inputs ; 43                          ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 51                          ;
+;         5 data inputs ; 44                          ;
+;         6 data inputs ; 50                          ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 168                         ;
 ; stratixv_ram_block    ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 27.00                       ;
-; Average LUT depth     ; 9.87                        ;
+; Average LUT depth     ; 9.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1013,80 +968,80 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Dec 03 12:43:11 2018
+    Info: Processing started: Mon Dec 03 14:06:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DC_final -c DC_final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_ctrl.v
-    Info (12023): Found entity 1: vga_ctrl File: E:/14A/digital circuit/DC_final/vga_ctrl.v Line: 1
+    Info (12023): Found entity 1: vga_ctrl File: E:/DigitalCurcuitLab/DC-Final-Project/vga_ctrl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom_font.v
-    Info (12023): Found entity 1: rom_font File: E:/14A/digital circuit/DC_final/rom_font.v Line: 39
+    Info (12023): Found entity 1: rom_font File: E:/DigitalCurcuitLab/DC-Final-Project/rom_font.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file rom_ascii.v
-    Info (12023): Found entity 1: rom_ascii File: E:/14A/digital circuit/DC_final/rom_ascii.v Line: 39
+    Info (12023): Found entity 1: rom_ascii File: E:/DigitalCurcuitLab/DC-Final-Project/rom_ascii.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file ram3.v
-    Info (12023): Found entity 1: ram3 File: E:/14A/digital circuit/DC_final/ram3.v Line: 39
+    Info (12023): Found entity 1: ram3 File: E:/DigitalCurcuitLab/DC-Final-Project/ram3.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file ps2_keyboard.v
-    Info (12023): Found entity 1: ps2_keyboard File: E:/14A/digital circuit/DC_final/ps2_keyboard.v Line: 1
+    Info (12023): Found entity 1: ps2_keyboard File: E:/DigitalCurcuitLab/DC-Final-Project/ps2_keyboard.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file light.v
-    Info (12023): Found entity 1: light File: E:/14A/digital circuit/DC_final/light.v Line: 1
+    Info (12023): Found entity 1: light File: E:/DigitalCurcuitLab/DC-Final-Project/light.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file exp11.v
-    Info (12023): Found entity 1: exp11 File: E:/14A/digital circuit/DC_final/exp11.v Line: 6
+    Info (12023): Found entity 1: exp11 File: E:/DigitalCurcuitLab/DC-Final-Project/exp11.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file exp09.v
-    Info (12023): Found entity 1: exp09 File: E:/14A/digital circuit/DC_final/exp09.v Line: 1
+    Info (12023): Found entity 1: exp09 File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file exp08.v
-    Info (12023): Found entity 1: exp08 File: E:/14A/digital circuit/DC_final/exp08.v Line: 1
+    Info (12023): Found entity 1: exp08 File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dc_final.v
-    Info (12023): Found entity 1: DC_final File: E:/14A/digital circuit/DC_final/DC_final.v Line: 6
+    Info (12023): Found entity 1: DC_final File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file clkgen.v
-    Info (12023): Found entity 1: clkgen File: E:/14A/digital circuit/DC_final/clkgen.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at exp09.v(23): created implicit net for "clk_5000" File: E:/14A/digital circuit/DC_final/exp09.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at exp09.v(24): created implicit net for "clk_10" File: E:/14A/digital circuit/DC_final/exp09.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at exp09.v(25): created implicit net for "clk_20" File: E:/14A/digital circuit/DC_final/exp09.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at exp11.v(72): instance has no name File: E:/14A/digital circuit/DC_final/exp11.v Line: 72
-Critical Warning (10846): Verilog HDL Instantiation warning at exp11.v(73): instance has no name File: E:/14A/digital circuit/DC_final/exp11.v Line: 73
-Critical Warning (10846): Verilog HDL Instantiation warning at DC_final.v(104): instance has no name File: E:/14A/digital circuit/DC_final/DC_final.v Line: 104
-Critical Warning (10846): Verilog HDL Instantiation warning at DC_final.v(105): instance has no name File: E:/14A/digital circuit/DC_final/DC_final.v Line: 105
+    Info (12023): Found entity 1: clkgen File: E:/DigitalCurcuitLab/DC-Final-Project/clkgen.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at exp09.v(27): created implicit net for "clk_10" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at exp11.v(72): instance has no name File: E:/DigitalCurcuitLab/DC-Final-Project/exp11.v Line: 72
+Critical Warning (10846): Verilog HDL Instantiation warning at exp11.v(73): instance has no name File: E:/DigitalCurcuitLab/DC-Final-Project/exp11.v Line: 73
+Critical Warning (10846): Verilog HDL Instantiation warning at DC_final.v(104): instance has no name File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 104
+Critical Warning (10846): Verilog HDL Instantiation warning at DC_final.v(105): instance has no name File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 105
 Info (12127): Elaborating entity "DC_final" for the top level hierarchy
-Warning (10034): Output port "LEDR" at DC_final.v(21) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-Warning (10034): Output port "HEX4" at DC_final.v(28) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-Warning (10034): Output port "HEX5" at DC_final.v(29) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-Warning (10034): Output port "DRAM_ADDR" at DC_final.v(32) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-Warning (10034): Output port "DRAM_BA" at DC_final.v(33) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 33
-Warning (10034): Output port "DRAM_CAS_N" at DC_final.v(34) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 34
-Warning (10034): Output port "DRAM_CKE" at DC_final.v(35) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 35
-Warning (10034): Output port "DRAM_CLK" at DC_final.v(36) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 36
-Warning (10034): Output port "DRAM_CS_N" at DC_final.v(37) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 37
-Warning (10034): Output port "DRAM_LDQM" at DC_final.v(39) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 39
-Warning (10034): Output port "DRAM_RAS_N" at DC_final.v(40) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 40
-Warning (10034): Output port "DRAM_UDQM" at DC_final.v(41) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 41
-Warning (10034): Output port "DRAM_WE_N" at DC_final.v(42) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 42
-Warning (10034): Output port "TD_RESET_N" at DC_final.v(48) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 48
-Warning (10034): Output port "AUD_DACDAT" at DC_final.v(65) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 65
-Warning (10034): Output port "AUD_XCK" at DC_final.v(67) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 67
-Warning (10034): Output port "ADC_CONVST" at DC_final.v(76) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 76
-Warning (10034): Output port "ADC_DIN" at DC_final.v(77) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 77
-Warning (10034): Output port "ADC_SCLK" at DC_final.v(79) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 79
-Warning (10034): Output port "FPGA_I2C_SCLK" at DC_final.v(82) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 82
-Warning (10034): Output port "IRDA_TXD" at DC_final.v(88) has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 88
-Info (12128): Elaborating entity "exp09" for hierarchy "exp09:comb_3" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 104
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(41): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(41): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
-Warning (10230): Verilog HDL assignment warning at exp09.v(41): truncated value with size 32 to match size of target (12) File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(42): variable "vga_ret" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 42
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(42): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 42
-Warning (10230): Verilog HDL assignment warning at exp09.v(42): truncated value with size 32 to match size of target (12) File: E:/14A/digital circuit/DC_final/exp09.v Line: 42
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(43): variable "font_ret" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 43
-Warning (10235): Verilog HDL Always Construct warning at exp09.v(43): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/14A/digital circuit/DC_final/exp09.v Line: 43
-Warning (10230): Verilog HDL assignment warning at exp09.v(77): truncated value with size 32 to match size of target (12) File: E:/14A/digital circuit/DC_final/exp09.v Line: 77
-Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c" File: E:/14A/digital circuit/DC_final/exp09.v Line: 22
-Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c4" File: E:/14A/digital circuit/DC_final/exp09.v Line: 23
-Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c2" File: E:/14A/digital circuit/DC_final/exp09.v Line: 24
-Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c3" File: E:/14A/digital circuit/DC_final/exp09.v Line: 25
-Info (12128): Elaborating entity "vga_ctrl" for hierarchy "exp09:comb_3|vga_ctrl:v" File: E:/14A/digital circuit/DC_final/exp09.v Line: 26
-Info (12128): Elaborating entity "ram3" for hierarchy "exp09:comb_3|ram3:my_ram3" File: E:/14A/digital circuit/DC_final/exp09.v Line: 29
-Info (12128): Elaborating entity "altsyncram" for hierarchy "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/ram3.v Line: 99
-Info (12130): Elaborated megafunction instantiation "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/ram3.v Line: 99
-Info (12133): Instantiated megafunction "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" with the following parameter: File: E:/14A/digital circuit/DC_final/ram3.v Line: 99
+Warning (10034): Output port "LEDR" at DC_final.v(21) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+Warning (10034): Output port "HEX4" at DC_final.v(28) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+Warning (10034): Output port "HEX5" at DC_final.v(29) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+Warning (10034): Output port "DRAM_ADDR" at DC_final.v(32) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+Warning (10034): Output port "DRAM_BA" at DC_final.v(33) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 33
+Warning (10034): Output port "DRAM_CAS_N" at DC_final.v(34) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 34
+Warning (10034): Output port "DRAM_CKE" at DC_final.v(35) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 35
+Warning (10034): Output port "DRAM_CLK" at DC_final.v(36) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 36
+Warning (10034): Output port "DRAM_CS_N" at DC_final.v(37) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 37
+Warning (10034): Output port "DRAM_LDQM" at DC_final.v(39) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 39
+Warning (10034): Output port "DRAM_RAS_N" at DC_final.v(40) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 40
+Warning (10034): Output port "DRAM_UDQM" at DC_final.v(41) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 41
+Warning (10034): Output port "DRAM_WE_N" at DC_final.v(42) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 42
+Warning (10034): Output port "TD_RESET_N" at DC_final.v(48) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 48
+Warning (10034): Output port "AUD_DACDAT" at DC_final.v(65) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 65
+Warning (10034): Output port "AUD_XCK" at DC_final.v(67) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 67
+Warning (10034): Output port "ADC_CONVST" at DC_final.v(76) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 76
+Warning (10034): Output port "ADC_DIN" at DC_final.v(77) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 77
+Warning (10034): Output port "ADC_SCLK" at DC_final.v(79) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 79
+Warning (10034): Output port "FPGA_I2C_SCLK" at DC_final.v(82) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 82
+Warning (10034): Output port "IRDA_TXD" at DC_final.v(88) has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 88
+Info (12128): Elaborating entity "exp09" for hierarchy "exp09:comb_3" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 104
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(51): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(51): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
+Warning (10230): Verilog HDL assignment warning at exp09.v(51): truncated value with size 32 to match size of target (12) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(52): variable "vga_ret" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 52
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(52): variable "v_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 52
+Warning (10230): Verilog HDL assignment warning at exp09.v(52): truncated value with size 32 to match size of target (12) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 52
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(53): variable "font_ret" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
+Warning (10235): Verilog HDL Always Construct warning at exp09.v(53): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
+Warning (10230): Verilog HDL assignment warning at exp09.v(85): truncated value with size 32 to match size of target (12) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 85
+Warning (10230): Verilog HDL assignment warning at exp09.v(92): truncated value with size 32 to match size of target (2) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 92
+Warning (10030): Net "falling_ascii.data_a" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
+Warning (10030): Net "falling_ascii.waddr_a[0]" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
+Warning (10030): Net "falling_ascii.we_a" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
+Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 26
+Info (12128): Elaborating entity "clkgen" for hierarchy "exp09:comb_3|clkgen:c2" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 27
+Info (12128): Elaborating entity "vga_ctrl" for hierarchy "exp09:comb_3|vga_ctrl:v" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 28
+Info (12128): Elaborating entity "ram3" for hierarchy "exp09:comb_3|ram3:my_ram3" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 31
+Info (12128): Elaborating entity "altsyncram" for hierarchy "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/ram3.v Line: 99
+Info (12130): Elaborated megafunction instantiation "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/ram3.v Line: 99
+Info (12133): Instantiated megafunction "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/ram3.v Line: 99
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1115,12 +1070,12 @@ Info (12133): Instantiated megafunction "exp09:comb_3|ram3:my_ram3|altsyncram:al
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tqm2.tdf
-    Info (12023): Found entity 1: altsyncram_tqm2 File: E:/14A/digital circuit/DC_final/db/altsyncram_tqm2.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_tqm2" for hierarchy "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated" File: e:/instruments/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "rom_font" for hierarchy "exp09:comb_3|rom_font:my_rom_font" File: E:/14A/digital circuit/DC_final/exp09.v Line: 30
-Info (12128): Elaborating entity "altsyncram" for hierarchy "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/rom_font.v Line: 81
-Info (12130): Elaborated megafunction instantiation "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/rom_font.v Line: 81
-Info (12133): Instantiated megafunction "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" with the following parameter: File: E:/14A/digital circuit/DC_final/rom_font.v Line: 81
+    Info (12023): Found entity 1: altsyncram_tqm2 File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_tqm2.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_tqm2" for hierarchy "exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated" File: e:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "rom_font" for hierarchy "exp09:comb_3|rom_font:my_rom_font" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 32
+Info (12128): Elaborating entity "altsyncram" for hierarchy "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/rom_font.v Line: 81
+Info (12130): Elaborated megafunction instantiation "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/rom_font.v Line: 81
+Info (12133): Instantiated megafunction "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/rom_font.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1137,18 +1092,18 @@ Info (12133): Instantiated megafunction "exp09:comb_3|rom_font:my_rom_font|altsy
     Info (12134): Parameter "width_a" = "9"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e8h1.tdf
-    Info (12023): Found entity 1: altsyncram_e8h1 File: E:/14A/digital circuit/DC_final/db/altsyncram_e8h1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_e8h1" for hierarchy "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated" File: e:/instruments/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "exp08" for hierarchy "exp08:comb_4" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 105
-Warning (10036): Verilog HDL or VHDL warning at exp08.v(4): object "true" assigned a value but never read File: E:/14A/digital circuit/DC_final/exp08.v Line: 4
-Warning (10036): Verilog HDL or VHDL warning at exp08.v(12): object "light_enable" assigned a value but never read File: E:/14A/digital circuit/DC_final/exp08.v Line: 12
-Warning (10230): Verilog HDL assignment warning at exp08.v(33): truncated value with size 32 to match size of target (7) File: E:/14A/digital circuit/DC_final/exp08.v Line: 33
-Warning (10230): Verilog HDL assignment warning at exp08.v(46): truncated value with size 32 to match size of target (8) File: E:/14A/digital circuit/DC_final/exp08.v Line: 46
-Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "exp08:comb_4|ps2_keyboard:p" File: E:/14A/digital circuit/DC_final/exp08.v Line: 14
-Info (12128): Elaborating entity "rom_ascii" for hierarchy "exp08:comb_4|rom_ascii:r" File: E:/14A/digital circuit/DC_final/exp08.v Line: 16
-Info (12128): Elaborating entity "altsyncram" for hierarchy "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/rom_ascii.v Line: 81
-Info (12130): Elaborated megafunction instantiation "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" File: E:/14A/digital circuit/DC_final/rom_ascii.v Line: 81
-Info (12133): Instantiated megafunction "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" with the following parameter: File: E:/14A/digital circuit/DC_final/rom_ascii.v Line: 81
+    Info (12023): Found entity 1: altsyncram_e8h1 File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_e8h1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_e8h1" for hierarchy "exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated" File: e:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "exp08" for hierarchy "exp08:comb_4" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 105
+Warning (10036): Verilog HDL or VHDL warning at exp08.v(4): object "true" assigned a value but never read File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 4
+Warning (10036): Verilog HDL or VHDL warning at exp08.v(12): object "light_enable" assigned a value but never read File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 12
+Warning (10230): Verilog HDL assignment warning at exp08.v(33): truncated value with size 32 to match size of target (7) File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 33
+Warning (10230): Verilog HDL assignment warning at exp08.v(46): truncated value with size 32 to match size of target (8) File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 46
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "exp08:comb_4|ps2_keyboard:p" File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 14
+Info (12128): Elaborating entity "rom_ascii" for hierarchy "exp08:comb_4|rom_ascii:r" File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 16
+Info (12128): Elaborating entity "altsyncram" for hierarchy "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/rom_ascii.v Line: 81
+Info (12130): Elaborated megafunction instantiation "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" File: E:/DigitalCurcuitLab/DC-Final-Project/rom_ascii.v Line: 81
+Info (12133): Instantiated megafunction "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/rom_ascii.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1165,20 +1120,22 @@ Info (12133): Instantiated megafunction "exp08:comb_4|rom_ascii:r|altsyncram:alt
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lhh1.tdf
-    Info (12023): Found entity 1: altsyncram_lhh1 File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_lhh1" for hierarchy "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated" File: e:/instruments/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "light" for hierarchy "light:l" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 106
+    Info (12023): Found entity 1: altsyncram_lhh1 File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_lhh1" for hierarchy "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated" File: e:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "light" for hierarchy "light:l" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 106
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[0]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 34
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[1]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 56
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[2]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 78
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[3]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 100
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[4]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 122
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[5]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 144
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[6]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 166
-        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[7]" File: E:/14A/digital circuit/DC_final/db/altsyncram_lhh1.tdf Line: 188
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[0]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 34
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[1]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 56
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[2]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 78
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[3]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 100
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[4]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 122
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[5]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 144
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[6]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 166
+        Warning (14320): Synthesized away node "exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|q_a[7]" File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lhh1.tdf Line: 188
 Warning (276020): Inferred RAM node "exp08:comb_4|ps2_keyboard:p|fifo_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "exp09:comb_3|falling_ascii" is uninferred due to inappropriate RAM size File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "exp08:comb_4|ps2_keyboard:p|fifo_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1196,8 +1153,8 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Mod0" File: E:/14A/digital circuit/DC_final/exp09.v Line: 43
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Div0" File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Mod0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Div0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
 Info (12130): Elaborated megafunction instantiation "exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0"
 Info (12133): Instantiated megafunction "exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1215,180 +1172,180 @@ Info (12133): Instantiated megafunction "exp08:comb_4|ps2_keyboard:p|altsyncram:
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lsj1.tdf
-    Info (12023): Found entity 1: altsyncram_lsj1 File: E:/14A/digital circuit/DC_final/db/altsyncram_lsj1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "exp09:comb_3|lpm_divide:Mod0" File: E:/14A/digital circuit/DC_final/exp09.v Line: 43
-Info (12133): Instantiated megafunction "exp09:comb_3|lpm_divide:Mod0" with the following parameter: File: E:/14A/digital circuit/DC_final/exp09.v Line: 43
+    Info (12023): Found entity 1: altsyncram_lsj1 File: E:/DigitalCurcuitLab/DC-Final-Project/db/altsyncram_lsj1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "exp09:comb_3|lpm_divide:Mod0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
+Info (12133): Instantiated megafunction "exp09:comb_3|lpm_divide:Mod0" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_h3m.tdf
-    Info (12023): Found entity 1: lpm_divide_h3m File: E:/14A/digital circuit/DC_final/db/lpm_divide_h3m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_h3m File: E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_h3m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_klh File: E:/14A/digital circuit/DC_final/db/sign_div_unsign_klh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_klh File: E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_klh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
-    Info (12023): Found entity 1: alt_u_div_eve File: E:/14A/digital circuit/DC_final/db/alt_u_div_eve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "exp09:comb_3|lpm_divide:Div0" File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
-Info (12133): Instantiated megafunction "exp09:comb_3|lpm_divide:Div0" with the following parameter: File: E:/14A/digital circuit/DC_final/exp09.v Line: 41
+    Info (12023): Found entity 1: alt_u_div_eve File: E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_eve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "exp09:comb_3|lpm_divide:Div0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
+Info (12133): Instantiated megafunction "exp09:comb_3|lpm_divide:Div0" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: E:/14A/digital circuit/DC_final/db/lpm_divide_ibm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_ibm File: E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_ibm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: E:/14A/digital circuit/DC_final/db/sign_div_unsign_olh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_olh File: E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: E:/14A/digital circuit/DC_final/db/alt_u_div_mve.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_mve File: E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_mve.tdf Line: 22
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 70
-    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 72
-    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
-    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 63
-    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 64
-    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 66
-    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 71
-    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 73
-    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: E:/14A/digital circuit/DC_final/DC_final.v Line: 83
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 70
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 72
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 38
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 63
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 64
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 66
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 71
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 73
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 83
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 21
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 24
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 25
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 28
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 29
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 32
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 33
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 33
-    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 34
-    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 35
-    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 36
-    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 37
-    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 39
-    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 40
-    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 41
-    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 42
-    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 48
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 58
-    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 65
-    Warning (13410): Pin "AUD_XCK" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 67
-    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 76
-    Warning (13410): Pin "ADC_DIN" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 77
-    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 79
-    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 82
-    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: E:/14A/digital circuit/DC_final/DC_final.v Line: 88
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 21
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 24
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 25
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 28
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 32
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 33
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 33
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 34
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 35
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 36
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 37
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 39
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 40
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 41
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 42
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 48
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 58
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 65
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 67
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 76
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 77
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 79
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 82
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 88
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file E:/14A/digital circuit/DC_final/DC_final.map.smsg
+Info (144001): Generated suppressed messages file E:/DigitalCurcuitLab/DC-Final-Project/DC_final.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 31 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 9
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 10
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 11
-    Warning (15610): No output dependent on input pin "KEY[0]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[1]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[2]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 15
-    Warning (15610): No output dependent on input pin "KEY[3]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 15
-    Warning (15610): No output dependent on input pin "SW[0]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[1]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[2]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[3]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[4]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[5]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[6]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[7]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[8]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "SW[9]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 18
-    Warning (15610): No output dependent on input pin "TD_CLK27" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 45
-    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 46
-    Warning (15610): No output dependent on input pin "TD_HS" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 47
-    Warning (15610): No output dependent on input pin "TD_VS" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 49
-    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 62
-    Warning (15610): No output dependent on input pin "ADC_DOUT" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 78
-    Warning (15610): No output dependent on input pin "IRDA_RXD" File: E:/14A/digital circuit/DC_final/DC_final.v Line: 86
-Info (21057): Implemented 715 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 9
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 11
+    Warning (15610): No output dependent on input pin "KEY[0]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[1]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 15
+    Warning (15610): No output dependent on input pin "KEY[3]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 15
+    Warning (15610): No output dependent on input pin "SW[0]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[1]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[2]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[3]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[4]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[5]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[6]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[7]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[8]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "SW[9]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 18
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 45
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 46
+    Warning (15610): No output dependent on input pin "TD_HS" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 47
+    Warning (15610): No output dependent on input pin "TD_VS" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 49
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 62
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 78
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 86
+Info (21057): Implemented 762 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 521 logic cells
+    Info (21061): Implemented 568 logic cells
     Info (21064): Implemented 25 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
-    Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Mon Dec 03 12:43:29 2018
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 183 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Mon Dec 03 14:07:07 2018
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/14A/digital circuit/DC_final/DC_final.map.smsg.
+The suppressed messages can be found in E:/DigitalCurcuitLab/DC-Final-Project/DC_final.map.smsg.
 
 
