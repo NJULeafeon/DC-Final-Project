@@ -1,6 +1,7 @@
 
-State Machine - |DC_final|exp09:comb_3|status
-Name status.00 status.10 status.01 
-status.00 0 0 0 
-status.01 1 0 1 
-status.10 1 1 0 
+State Machine - |DC_final|exp09:vga|status
+Name status.11 status.10 status.01 status.00 
+status.00 0 0 0 0 
+status.01 0 0 1 1 
+status.10 0 1 0 1 
+status.11 1 0 0 1 

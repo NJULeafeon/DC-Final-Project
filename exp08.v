@@ -1,4 +1,4 @@
-module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg);
+module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg, ready_out);
 	input clk,clrn,ps2_clk,ps2_data;
 	output [7:0] ascii;
 	reg true = 1;
@@ -7,6 +7,7 @@ module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg);
 	reg flag = 1;
 	reg CapsLock = 0;
 	wire ready,overflow;
+    output reg ready_out;
 	wire [7:0] code;
 	output reg [7:0] code_reg;
 	reg light_enable = 0;
@@ -41,6 +42,7 @@ module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg);
 		begin
 			nextdata <= 0;
 			code_reg <= code;
+            ready_out <= ready;
 			if(code == 8'hf0)
 			begin
 				data_count <= data_count + 1;
@@ -62,7 +64,10 @@ module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg);
 			end
 			
 		end
-		else nextdata <= 1;
+        else begin
+            ready_out <= 0;
+            nextdata <= 1;
+        end
 	end
 	
 	
