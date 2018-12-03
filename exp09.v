@@ -1,4 +1,10 @@
-module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index);
+module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index, state, kbd_ascii, output_ascii,kbd_input);
+input [1:0] state;
+input [7:0] kbd_ascii;
+output reg kbd_input = 0;
+reg [7:0] input_ascii;
+reg [11:0] lowest_pos;
+output reg [7:0] output_ascii;
 input clk;
 reg [7:0] ascii;
 output clk_ls,hsync,vsync,vga_sync_n,valid;
@@ -11,6 +17,7 @@ reg [11:0] position;
 reg [11:0] pos [3:0];
 reg [7:0] falling_ascii [3:0];
 reg [3:0] valid_fall;
+reg [3:0] rev;
 
 reg [23:0] data = 0;
 reg [11:0] block_addr = 0;
@@ -28,7 +35,7 @@ wire clk_rand3;
 wire [7:0] rand1;
 wire [7:0] rand2;
 wire [7:0] rand3;
-wire [7:0] rand_ascii = rand1 % 8'd26 + 8'h41;
+wire [7:0] rand_ascii = rand1 % 8'd26 + 8'h61;
 wire [7:0] rand_pos = rand2 % 8'd71;
 wire [7:0] rand_next = rand3 % 8'd20;    // if rand_next == 10 then generate the next char
 
@@ -56,12 +63,18 @@ initial begin
     valid_fall[1] = 0;
     falling_ascii[0] = 8'h0;
     falling_ascii[1] = 8'h0;
+	 falling_ascii[2] = 8'h0;
+    falling_ascii[3] = 8'h0;
     valid_fall[2] = 0;
     valid_fall[3] = 0;
+    rev[0] = 0;
+    rev[1] = 0;
+    rev[2] = 0;
+    rev[3] = 0;
 end
 
 
-always @ (clk_ls)
+always @ (posedge clk_ls)
 begin
     block_addr <= (v_addr / 16) * 70 + ((h_addr-4) / 9);
     addr <= (vga_ret << 4) + (v_addr % 16);
@@ -70,8 +83,14 @@ begin
 end
 
 reg [4:0] counter = 0;
+reg [4:0] triggered = 5;
 always @ (posedge clk_ls)
 begin
+	 if (state == 2'b01) begin
+		kbd_input <= 1;
+		input_ascii <= kbd_ascii;
+		output_ascii <= kbd_ascii;
+	 end
     if(clk_10)
     begin
         if ( counter <= 4 && valid_fall[counter]) begin
@@ -84,24 +103,42 @@ begin
                 end
                 2'd1:
                 begin
-                    status <= 2'd2;
-                    if ( pos[counter] + 70 <= 2100 ) begin
-								ascii <= falling_ascii[counter];
-                        pos[counter] = pos[counter] + 70;
-                    end else begin
-								ascii <= 0;
-						     valid_fall[counter] <= 0;
-						  end
-                    position <= pos[counter];
+                    if ( rev[counter] ) status <= 2'd3;
+                    else status <= 2'd2;
                 end	
                 2'd2:
                 begin
+                    if ( pos[counter] + 70 <= 2100 ) begin
+						pos[counter] = pos[counter] + 70;
+                        ascii <= falling_ascii[counter];
+                    end
+                    else begin
+                        valid_fall[counter] <= 0;
+                        ascii <= 0;
+								rev[counter] <= 0;
+                    end
+                    position <= pos[counter];
+                    status <= 2'd0;
+                    counter <= counter + 1;
+                end
+                2'd3:
+                begin
+                    if ( pos[counter] >= 70 ) begin
+                        pos[counter] = pos[counter] - 70;
+                        ascii <= falling_ascii[counter];
+                    end
+                    else begin
+                        valid_fall[counter] <= 0;
+                        ascii <= 0;
+								rev[counter] <= 0;
+                    end
+                    position <= pos[counter];
                     status <= 2'd0;
                     counter <= counter + 1;
                 end
             endcase
         end else if ( counter <= 4 ) begin
-            if ( rand_next == 8'd10 ) begin
+            if ( rand_next == 8'd11 ) begin
                 valid_fall[counter] <= 1;
                 pos[counter] <= rand_pos;
                 falling_ascii[counter] <= rand_ascii;
@@ -109,7 +146,23 @@ begin
             end
         end
     end
-    else counter <= 2'd0;
+    else begin
+        if ( kbd_input ) begin
+            if ( counter <= 4 && falling_ascii[counter] == input_ascii && valid_fall[counter] && rev[counter] == 0) begin
+                lowest_pos <= pos[counter];
+                triggered <= counter;
+                counter <= counter + 1;
+            end else if (counter > 4 ) begin
+                rev[triggered] <= 1;
+                triggered <= 5;
+                kbd_input <= 0;
+            end else begin
+					counter <= counter + 1;
+				end
+        end else begin
+	        counter <= 2'd0;
+        end
+    end
 end
 
 endmodule

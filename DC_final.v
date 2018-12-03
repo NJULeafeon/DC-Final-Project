@@ -96,14 +96,18 @@ module DC_final(
 wire [7:0] ascii;
 wire [7:0] code_reg;
 wire [11:0] index;
-
+wire [7:0] output_ascii;
 
 //=======================================================
 //  Structural coding
 //=======================================================
-exp09(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,index);
-exp08(CLOCK_50,1'b1,PS2_CLK,PS2_DAT,ascii,code_reg);
-light l(.data(index[7:0]),.out_h(HEX1),.out_l(HEX0),.enable(1'b1));
-light l2(.data(code_reg),.out_h(HEX3),.out_l(HEX2),.enable(1'b1));
+wire ready;
+wire kbd_input;
+wire [1:0] state;
+exp09 vga(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,index, state, ascii, output_ascii,KEY[0]);
+mykbd my_keyboard(CLOCK_50,PS2_CLK,PS2_DAT,state,ascii,ready);
+//exp08 kbd(CLOCK_50, 1'b1, PS2_CLK,PS2_DAT,ascii,code_reg, ready);
+light l(.data(output_ascii),.out_h(HEX1),.out_l(HEX0),.enable(1'b1));
+light l2(.data(ascii),.out_h(HEX3),.out_l(HEX2),.enable(1'b1));
 
 endmodule

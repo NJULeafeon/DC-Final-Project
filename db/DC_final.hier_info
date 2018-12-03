@@ -3,7 +3,7 @@ CLOCK2_50 => ~NO_FANOUT~
 CLOCK3_50 => ~NO_FANOUT~
 CLOCK4_50 => ~NO_FANOUT~
 CLOCK_50 => CLOCK_50.IN2
-KEY[0] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
@@ -17,77 +17,77 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
-LEDR[0] << <GND>
-LEDR[1] << <GND>
-LEDR[2] << <GND>
-LEDR[3] << <GND>
-LEDR[4] << <GND>
-LEDR[5] << <GND>
-LEDR[6] << <GND>
-LEDR[7] << <GND>
-LEDR[8] << <GND>
-LEDR[9] << <GND>
-HEX0[0] << light:l.out_l
-HEX0[1] << light:l.out_l
-HEX0[2] << light:l.out_l
-HEX0[3] << light:l.out_l
-HEX0[4] << light:l.out_l
-HEX0[5] << light:l.out_l
-HEX0[6] << light:l.out_l
-HEX1[0] << light:l.out_h
-HEX1[1] << light:l.out_h
-HEX1[2] << light:l.out_h
-HEX1[3] << light:l.out_h
-HEX1[4] << light:l.out_h
-HEX1[5] << light:l.out_h
-HEX1[6] << light:l.out_h
-HEX2[0] << light:l2.out_l
-HEX2[1] << light:l2.out_l
-HEX2[2] << light:l2.out_l
-HEX2[3] << light:l2.out_l
-HEX2[4] << light:l2.out_l
-HEX2[5] << light:l2.out_l
-HEX2[6] << light:l2.out_l
-HEX3[0] << light:l2.out_h
-HEX3[1] << light:l2.out_h
-HEX3[2] << light:l2.out_h
-HEX3[3] << light:l2.out_h
-HEX3[4] << light:l2.out_h
-HEX3[5] << light:l2.out_h
-HEX3[6] << light:l2.out_h
-HEX4[0] << <GND>
-HEX4[1] << <GND>
-HEX4[2] << <GND>
-HEX4[3] << <GND>
-HEX4[4] << <GND>
-HEX4[5] << <GND>
-HEX4[6] << <GND>
-HEX5[0] << <GND>
-HEX5[1] << <GND>
-HEX5[2] << <GND>
-HEX5[3] << <GND>
-HEX5[4] << <GND>
-HEX5[5] << <GND>
-HEX5[6] << <GND>
-DRAM_ADDR[0] << <GND>
-DRAM_ADDR[1] << <GND>
-DRAM_ADDR[2] << <GND>
-DRAM_ADDR[3] << <GND>
-DRAM_ADDR[4] << <GND>
-DRAM_ADDR[5] << <GND>
-DRAM_ADDR[6] << <GND>
-DRAM_ADDR[7] << <GND>
-DRAM_ADDR[8] << <GND>
-DRAM_ADDR[9] << <GND>
-DRAM_ADDR[10] << <GND>
-DRAM_ADDR[11] << <GND>
-DRAM_ADDR[12] << <GND>
-DRAM_BA[0] << <GND>
-DRAM_BA[1] << <GND>
-DRAM_CAS_N << <GND>
-DRAM_CKE << <GND>
-DRAM_CLK << <GND>
-DRAM_CS_N << <GND>
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= light:l.out_l
+HEX0[1] <= light:l.out_l
+HEX0[2] <= light:l.out_l
+HEX0[3] <= light:l.out_l
+HEX0[4] <= light:l.out_l
+HEX0[5] <= light:l.out_l
+HEX0[6] <= light:l.out_l
+HEX1[0] <= light:l.out_h
+HEX1[1] <= light:l.out_h
+HEX1[2] <= light:l.out_h
+HEX1[3] <= light:l.out_h
+HEX1[4] <= light:l.out_h
+HEX1[5] <= light:l.out_h
+HEX1[6] <= light:l.out_h
+HEX2[0] <= light:l2.out_l
+HEX2[1] <= light:l2.out_l
+HEX2[2] <= light:l2.out_l
+HEX2[3] <= light:l2.out_l
+HEX2[4] <= light:l2.out_l
+HEX2[5] <= light:l2.out_l
+HEX2[6] <= light:l2.out_l
+HEX3[0] <= light:l2.out_h
+HEX3[1] <= light:l2.out_h
+HEX3[2] <= light:l2.out_h
+HEX3[3] <= light:l2.out_h
+HEX3[4] <= light:l2.out_h
+HEX3[5] <= light:l2.out_h
+HEX3[6] <= light:l2.out_h
+HEX4[0] <= <GND>
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
+DRAM_ADDR[0] <= <GND>
+DRAM_ADDR[1] <= <GND>
+DRAM_ADDR[2] <= <GND>
+DRAM_ADDR[3] <= <GND>
+DRAM_ADDR[4] <= <GND>
+DRAM_ADDR[5] <= <GND>
+DRAM_ADDR[6] <= <GND>
+DRAM_ADDR[7] <= <GND>
+DRAM_ADDR[8] <= <GND>
+DRAM_ADDR[9] <= <GND>
+DRAM_ADDR[10] <= <GND>
+DRAM_ADDR[11] <= <GND>
+DRAM_ADDR[12] <= <GND>
+DRAM_BA[0] <= <GND>
+DRAM_BA[1] <= <GND>
+DRAM_CAS_N <= <GND>
+DRAM_CKE <= <GND>
+DRAM_CLK <= <GND>
+DRAM_CS_N <= <GND>
 DRAM_DQ[0] <> <UNC>
 DRAM_DQ[1] <> <UNC>
 DRAM_DQ[2] <> <UNC>
@@ -104,10 +104,10 @@ DRAM_DQ[12] <> <UNC>
 DRAM_DQ[13] <> <UNC>
 DRAM_DQ[14] <> <UNC>
 DRAM_DQ[15] <> <UNC>
-DRAM_LDQM << <GND>
-DRAM_RAS_N << <GND>
-DRAM_UDQM << <GND>
-DRAM_WE_N << <GND>
+DRAM_LDQM <= <GND>
+DRAM_RAS_N <= <GND>
+DRAM_UDQM <= <GND>
+DRAM_WE_N <= <GND>
 TD_CLK27 => ~NO_FANOUT~
 TD_DATA[0] => ~NO_FANOUT~
 TD_DATA[1] => ~NO_FANOUT~
@@ -118,58 +118,58 @@ TD_DATA[5] => ~NO_FANOUT~
 TD_DATA[6] => ~NO_FANOUT~
 TD_DATA[7] => ~NO_FANOUT~
 TD_HS => ~NO_FANOUT~
-TD_RESET_N << <GND>
+TD_RESET_N <= <GND>
 TD_VS => ~NO_FANOUT~
-VGA_BLANK_N << exp09:comb_3.port5
-VGA_B[0] << exp09:comb_3.port8
-VGA_B[1] << exp09:comb_3.port8
-VGA_B[2] << exp09:comb_3.port8
-VGA_B[3] << exp09:comb_3.port8
-VGA_B[4] << exp09:comb_3.port8
-VGA_B[5] << exp09:comb_3.port8
-VGA_B[6] << exp09:comb_3.port8
-VGA_B[7] << exp09:comb_3.port8
-VGA_CLK << exp09:comb_3.port1
-VGA_G[0] << exp09:comb_3.port7
-VGA_G[1] << exp09:comb_3.port7
-VGA_G[2] << exp09:comb_3.port7
-VGA_G[3] << exp09:comb_3.port7
-VGA_G[4] << exp09:comb_3.port7
-VGA_G[5] << exp09:comb_3.port7
-VGA_G[6] << exp09:comb_3.port7
-VGA_G[7] << exp09:comb_3.port7
-VGA_HS << exp09:comb_3.port2
-VGA_R[0] << exp09:comb_3.port6
-VGA_R[1] << exp09:comb_3.port6
-VGA_R[2] << exp09:comb_3.port6
-VGA_R[3] << exp09:comb_3.port6
-VGA_R[4] << exp09:comb_3.port6
-VGA_R[5] << exp09:comb_3.port6
-VGA_R[6] << exp09:comb_3.port6
-VGA_R[7] << exp09:comb_3.port6
-VGA_SYNC_N << exp09:comb_3.port4
-VGA_VS << exp09:comb_3.port3
+VGA_BLANK_N <= exp09:vga.port5
+VGA_B[0] <= exp09:vga.port8
+VGA_B[1] <= exp09:vga.port8
+VGA_B[2] <= exp09:vga.port8
+VGA_B[3] <= exp09:vga.port8
+VGA_B[4] <= exp09:vga.port8
+VGA_B[5] <= exp09:vga.port8
+VGA_B[6] <= exp09:vga.port8
+VGA_B[7] <= exp09:vga.port8
+VGA_CLK <= exp09:vga.port1
+VGA_G[0] <= exp09:vga.port7
+VGA_G[1] <= exp09:vga.port7
+VGA_G[2] <= exp09:vga.port7
+VGA_G[3] <= exp09:vga.port7
+VGA_G[4] <= exp09:vga.port7
+VGA_G[5] <= exp09:vga.port7
+VGA_G[6] <= exp09:vga.port7
+VGA_G[7] <= exp09:vga.port7
+VGA_HS <= exp09:vga.port2
+VGA_R[0] <= exp09:vga.port6
+VGA_R[1] <= exp09:vga.port6
+VGA_R[2] <= exp09:vga.port6
+VGA_R[3] <= exp09:vga.port6
+VGA_R[4] <= exp09:vga.port6
+VGA_R[5] <= exp09:vga.port6
+VGA_R[6] <= exp09:vga.port6
+VGA_R[7] <= exp09:vga.port6
+VGA_SYNC_N <= exp09:vga.port4
+VGA_VS <= exp09:vga.port3
 AUD_ADCDAT => ~NO_FANOUT~
 AUD_ADCLRCK <> <UNC>
 AUD_BCLK <> <UNC>
-AUD_DACDAT << <GND>
+AUD_DACDAT <= <GND>
 AUD_DACLRCK <> <UNC>
-AUD_XCK << <GND>
-PS2_CLK <> exp08:comb_4.port2
+AUD_XCK <= <GND>
+PS2_CLK <> mykbd:my_keyboard.port1
 PS2_CLK2 <> <UNC>
-PS2_DAT <> exp08:comb_4.port3
+PS2_DAT <> mykbd:my_keyboard.port2
 PS2_DAT2 <> <UNC>
-ADC_CONVST << <GND>
-ADC_DIN << <GND>
+ADC_CONVST <= <GND>
+ADC_DIN <= <GND>
 ADC_DOUT => ~NO_FANOUT~
-ADC_SCLK << <GND>
-FPGA_I2C_SCLK << <GND>
+ADC_SCLK <= <GND>
+FPGA_I2C_SCLK <= <GND>
 FPGA_I2C_SDAT <> <UNC>
 IRDA_RXD => ~NO_FANOUT~
-IRDA_TXD << <GND>
+IRDA_TXD <= <GND>
 
 
-|DC_final|exp09:comb_3
+|DC_final|exp09:vga
 clk => clk.IN5
 clk_ls <= clk_ls.DB_MAX_OUTPUT_PORT_TYPE
 hsync <= vga_ctrl:v.hsync
@@ -212,9 +212,36 @@ index[8] <= <VCC>
 index[9] <= <GND>
 index[10] <= <GND>
 index[11] <= <GND>
+state[0] => Equal0.IN1
+state[1] => Equal0.IN0
+kbd_ascii[0] => output_ascii[0]~reg0.DATAIN
+kbd_ascii[0] => input_ascii[0].DATAIN
+kbd_ascii[1] => output_ascii[1]~reg0.DATAIN
+kbd_ascii[1] => input_ascii[1].DATAIN
+kbd_ascii[2] => output_ascii[2]~reg0.DATAIN
+kbd_ascii[2] => input_ascii[2].DATAIN
+kbd_ascii[3] => output_ascii[3]~reg0.DATAIN
+kbd_ascii[3] => input_ascii[3].DATAIN
+kbd_ascii[4] => output_ascii[4]~reg0.DATAIN
+kbd_ascii[4] => input_ascii[4].DATAIN
+kbd_ascii[5] => output_ascii[5]~reg0.DATAIN
+kbd_ascii[5] => input_ascii[5].DATAIN
+kbd_ascii[6] => output_ascii[6]~reg0.DATAIN
+kbd_ascii[6] => input_ascii[6].DATAIN
+kbd_ascii[7] => output_ascii[7]~reg0.DATAIN
+kbd_ascii[7] => input_ascii[7].DATAIN
+output_ascii[0] <= output_ascii[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[1] <= output_ascii[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[2] <= output_ascii[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[3] <= output_ascii[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[4] <= output_ascii[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[5] <= output_ascii[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[6] <= output_ascii[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output_ascii[7] <= output_ascii[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+kbd_input <= kbd_input~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|clkgen:c
+|DC_final|exp09:vga|clkgen:c
 clkin => clkout~reg0.CLK
 clkin => clkcount[0].CLK
 clkin => clkcount[1].CLK
@@ -317,7 +344,7 @@ clken => clkout.OUTPUTSELECT
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|clkgen:c3
+|DC_final|exp09:vga|clkgen:c3
 clkin => clkout~reg0.CLK
 clkin => clkcount[0].CLK
 clkin => clkcount[1].CLK
@@ -420,7 +447,7 @@ clken => clkout.OUTPUTSELECT
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|clkgen:c4
+|DC_final|exp09:vga|clkgen:c4
 clkin => clkout~reg0.CLK
 clkin => clkcount[0].CLK
 clkin => clkcount[1].CLK
@@ -523,7 +550,7 @@ clken => clkout.OUTPUTSELECT
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|clkgen:c2
+|DC_final|exp09:vga|clkgen:c2
 clkin => clkout~reg0.CLK
 clkin => clkcount[0].CLK
 clkin => clkcount[1].CLK
@@ -626,7 +653,7 @@ clken => clkout.OUTPUTSELECT
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|vga_ctrl:v
+|DC_final|exp09:vga|vga_ctrl:v
 pclk => y_cnt[0].CLK
 pclk => y_cnt[1].CLK
 pclk => y_cnt[2].CLK
@@ -740,7 +767,7 @@ vga_b[6] <= vga_data[6].DB_MAX_OUTPUT_PORT_TYPE
 vga_b[7] <= vga_data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|ram3:my_ram3
+|DC_final|exp09:vga|ram3:my_ram3
 address_a[0] => address_a[0].IN1
 address_a[1] => address_a[1].IN1
 address_a[2] => address_a[2].IN1
@@ -803,7 +830,7 @@ q_b[6] <= altsyncram:altsyncram_component.q_b
 q_b[7] <= altsyncram:altsyncram_component.q_b
 
 
-|DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component
+|DC_final|exp09:vga|ram3:my_ram3|altsyncram:altsyncram_component
 wren_a => altsyncram_tqm2:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_tqm2:auto_generated.wren_b
@@ -881,7 +908,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated
+|DC_final|exp09:vga|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1140,7 +1167,7 @@ wren_b => ram_block1a6.PORTBWE
 wren_b => ram_block1a7.PORTBWE
 
 
-|DC_final|exp09:comb_3|rom_font:my_rom_font
+|DC_final|exp09:vga|rom_font:my_rom_font
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -1165,7 +1192,7 @@ q[7] <= altsyncram:altsyncram_component.q_a
 q[8] <= altsyncram:altsyncram_component.q_a
 
 
-|DC_final|exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component
+|DC_final|exp09:vga|rom_font:my_rom_font|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1220,7 +1247,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|DC_final|exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated
+|DC_final|exp09:vga|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1349,7 +1376,7 @@ q_a[7] <= ram_block1a7.PORTADATAOUT
 q_a[8] <= ram_block1a8.PORTADATAOUT
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen
+|DC_final|exp09:vga|LFSR:rand_gen
 en => Lab06_Register:lfsr.en
 clk => Lab06_Register:lfsr.clk
 clk => in.CLK
@@ -1363,7 +1390,7 @@ out[6] <= Lab06_Register:lfsr.out[6]
 out[7] <= Lab06_Register:lfsr.out[7]
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen|Lab06_Register:lfsr
+|DC_final|exp09:vga|LFSR:rand_gen|Lab06_Register:lfsr
 en => out[0]~reg0.ENA
 en => out[1]~reg0.ENA
 en => out[2]~reg0.ENA
@@ -1423,7 +1450,7 @@ out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen2
+|DC_final|exp09:vga|LFSR:rand_gen2
 en => Lab06_Register:lfsr.en
 clk => Lab06_Register:lfsr.clk
 clk => in.CLK
@@ -1437,7 +1464,7 @@ out[6] <= Lab06_Register:lfsr.out[6]
 out[7] <= Lab06_Register:lfsr.out[7]
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen2|Lab06_Register:lfsr
+|DC_final|exp09:vga|LFSR:rand_gen2|Lab06_Register:lfsr
 en => out[0]~reg0.ENA
 en => out[1]~reg0.ENA
 en => out[2]~reg0.ENA
@@ -1497,7 +1524,7 @@ out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen3
+|DC_final|exp09:vga|LFSR:rand_gen3
 en => Lab06_Register:lfsr.en
 clk => Lab06_Register:lfsr.clk
 clk => in.CLK
@@ -1511,7 +1538,7 @@ out[6] <= Lab06_Register:lfsr.out[6]
 out[7] <= Lab06_Register:lfsr.out[7]
 
 
-|DC_final|exp09:comb_3|LFSR:rand_gen3|Lab06_Register:lfsr
+|DC_final|exp09:vga|LFSR:rand_gen3|Lab06_Register:lfsr
 en => out[0]~reg0.ENA
 en => out[1]~reg0.ENA
 en => out[2]~reg0.ENA
@@ -1571,30 +1598,36 @@ out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DC_final|exp08:comb_4
-clk => clk.IN1
-clrn => ps2_keyboard:p.clrn
-ps2_clk => ps2_keyboard:p.ps2_clk
-ps2_data => ps2_keyboard:p.ps2_data
-ascii[0] <= rom_ascii:r.q
-ascii[1] <= rom_ascii:r.q
-ascii[2] <= rom_ascii:r.q
-ascii[3] <= rom_ascii:r.q
-ascii[4] <= rom_ascii:r.q
-ascii[5] <= rom_ascii:r.q
-ascii[6] <= rom_ascii:r.q
-ascii[7] <= rom_ascii:r.q
-code_reg[0] <= code_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[1] <= code_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[2] <= code_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[3] <= code_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[4] <= code_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[5] <= code_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[6] <= code_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-code_reg[7] <= code_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+|DC_final|mykbd:my_keyboard
+clk => ps2_keyboard:kbd.clk
+clk => nextdata_n.CLK
+clk => rawcode[0].CLK
+clk => rawcode[1].CLK
+clk => rawcode[2].CLK
+clk => rawcode[3].CLK
+clk => rawcode[4].CLK
+clk => rawcode[5].CLK
+clk => rawcode[6].CLK
+clk => rawcode[7].CLK
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => clrn.CLK
+ps2_clk => ps2_keyboard:kbd.ps2_clk
+ps2_data => ps2_keyboard:kbd.ps2_data
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ascii[0] <= Ram0.DATAOUT
+ascii[1] <= Ram0.DATAOUT1
+ascii[2] <= Ram0.DATAOUT2
+ascii[3] <= Ram0.DATAOUT3
+ascii[4] <= Ram0.DATAOUT4
+ascii[5] <= Ram0.DATAOUT5
+ascii[6] <= Ram0.DATAOUT6
+ascii[7] <= Ram0.DATAOUT7
+ready <= ps2_keyboard:kbd.ready
 
 
-|DC_final|exp08:comb_4|ps2_keyboard:p
+|DC_final|mykbd:my_keyboard|ps2_keyboard:kbd
 clk => fifo.we_a.CLK
 clk => fifo.waddr_a[2].CLK
 clk => fifo.waddr_a[1].CLK
@@ -1682,158 +1715,6 @@ nextdata_n => r_ptr.OUTPUTSELECT
 nextdata_n => r_ptr.OUTPUTSELECT
 nextdata_n => ready.OUTPUTSELECT
 overflow <= overflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|DC_final|exp08:comb_4|rom_ascii:r
-address[0] => address[0].IN1
-address[1] => address[1].IN1
-address[2] => address[2].IN1
-address[3] => address[3].IN1
-address[4] => address[4].IN1
-address[5] => address[5].IN1
-address[6] => address[6].IN1
-address[7] => address[7].IN1
-clock => clock.IN1
-q[0] <= altsyncram:altsyncram_component.q_a
-q[1] <= altsyncram:altsyncram_component.q_a
-q[2] <= altsyncram:altsyncram_component.q_a
-q[3] <= altsyncram:altsyncram_component.q_a
-q[4] <= altsyncram:altsyncram_component.q_a
-q[5] <= altsyncram:altsyncram_component.q_a
-q[6] <= altsyncram:altsyncram_component.q_a
-q[7] <= altsyncram:altsyncram_component.q_a
-
-
-|DC_final|exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component
-wren_a => ~NO_FANOUT~
-rden_a => ~NO_FANOUT~
-wren_b => ~NO_FANOUT~
-rden_b => ~NO_FANOUT~
-data_a[0] => ~NO_FANOUT~
-data_a[1] => ~NO_FANOUT~
-data_a[2] => ~NO_FANOUT~
-data_a[3] => ~NO_FANOUT~
-data_a[4] => ~NO_FANOUT~
-data_a[5] => ~NO_FANOUT~
-data_a[6] => ~NO_FANOUT~
-data_a[7] => ~NO_FANOUT~
-data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_lhh1:auto_generated.address_a[0]
-address_a[1] => altsyncram_lhh1:auto_generated.address_a[1]
-address_a[2] => altsyncram_lhh1:auto_generated.address_a[2]
-address_a[3] => altsyncram_lhh1:auto_generated.address_a[3]
-address_a[4] => altsyncram_lhh1:auto_generated.address_a[4]
-address_a[5] => altsyncram_lhh1:auto_generated.address_a[5]
-address_a[6] => altsyncram_lhh1:auto_generated.address_a[6]
-address_a[7] => altsyncram_lhh1:auto_generated.address_a[7]
-address_b[0] => ~NO_FANOUT~
-addressstall_a => ~NO_FANOUT~
-addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_lhh1:auto_generated.clock0
-clock1 => ~NO_FANOUT~
-clocken0 => ~NO_FANOUT~
-clocken1 => ~NO_FANOUT~
-clocken2 => ~NO_FANOUT~
-clocken3 => ~NO_FANOUT~
-aclr0 => ~NO_FANOUT~
-aclr1 => ~NO_FANOUT~
-byteena_a[0] => ~NO_FANOUT~
-byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_lhh1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_lhh1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_lhh1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_lhh1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_lhh1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_lhh1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_lhh1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_lhh1:auto_generated.q_a[7]
-q_b[0] <= <GND>
-eccstatus[0] <= <GND>
-eccstatus[1] <= <GND>
-eccstatus[2] <= <GND>
-
-
-|DC_final|exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[0] => ram_block1a1.PORTAADDR
-address_a[0] => ram_block1a2.PORTAADDR
-address_a[0] => ram_block1a3.PORTAADDR
-address_a[0] => ram_block1a4.PORTAADDR
-address_a[0] => ram_block1a5.PORTAADDR
-address_a[0] => ram_block1a6.PORTAADDR
-address_a[0] => ram_block1a7.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[1] => ram_block1a1.PORTAADDR1
-address_a[1] => ram_block1a2.PORTAADDR1
-address_a[1] => ram_block1a3.PORTAADDR1
-address_a[1] => ram_block1a4.PORTAADDR1
-address_a[1] => ram_block1a5.PORTAADDR1
-address_a[1] => ram_block1a6.PORTAADDR1
-address_a[1] => ram_block1a7.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[2] => ram_block1a1.PORTAADDR2
-address_a[2] => ram_block1a2.PORTAADDR2
-address_a[2] => ram_block1a3.PORTAADDR2
-address_a[2] => ram_block1a4.PORTAADDR2
-address_a[2] => ram_block1a5.PORTAADDR2
-address_a[2] => ram_block1a6.PORTAADDR2
-address_a[2] => ram_block1a7.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[3] => ram_block1a1.PORTAADDR3
-address_a[3] => ram_block1a2.PORTAADDR3
-address_a[3] => ram_block1a3.PORTAADDR3
-address_a[3] => ram_block1a4.PORTAADDR3
-address_a[3] => ram_block1a5.PORTAADDR3
-address_a[3] => ram_block1a6.PORTAADDR3
-address_a[3] => ram_block1a7.PORTAADDR3
-address_a[4] => ram_block1a0.PORTAADDR4
-address_a[4] => ram_block1a1.PORTAADDR4
-address_a[4] => ram_block1a2.PORTAADDR4
-address_a[4] => ram_block1a3.PORTAADDR4
-address_a[4] => ram_block1a4.PORTAADDR4
-address_a[4] => ram_block1a5.PORTAADDR4
-address_a[4] => ram_block1a6.PORTAADDR4
-address_a[4] => ram_block1a7.PORTAADDR4
-address_a[5] => ram_block1a0.PORTAADDR5
-address_a[5] => ram_block1a1.PORTAADDR5
-address_a[5] => ram_block1a2.PORTAADDR5
-address_a[5] => ram_block1a3.PORTAADDR5
-address_a[5] => ram_block1a4.PORTAADDR5
-address_a[5] => ram_block1a5.PORTAADDR5
-address_a[5] => ram_block1a6.PORTAADDR5
-address_a[5] => ram_block1a7.PORTAADDR5
-address_a[6] => ram_block1a0.PORTAADDR6
-address_a[6] => ram_block1a1.PORTAADDR6
-address_a[6] => ram_block1a2.PORTAADDR6
-address_a[6] => ram_block1a3.PORTAADDR6
-address_a[6] => ram_block1a4.PORTAADDR6
-address_a[6] => ram_block1a5.PORTAADDR6
-address_a[6] => ram_block1a6.PORTAADDR6
-address_a[6] => ram_block1a7.PORTAADDR6
-address_a[7] => ram_block1a0.PORTAADDR7
-address_a[7] => ram_block1a1.PORTAADDR7
-address_a[7] => ram_block1a2.PORTAADDR7
-address_a[7] => ram_block1a3.PORTAADDR7
-address_a[7] => ram_block1a4.PORTAADDR7
-address_a[7] => ram_block1a5.PORTAADDR7
-address_a[7] => ram_block1a6.PORTAADDR7
-address_a[7] => ram_block1a7.PORTAADDR7
-clock0 => ram_block1a0.CLK0
-clock0 => ram_block1a1.CLK0
-clock0 => ram_block1a2.CLK0
-clock0 => ram_block1a3.CLK0
-clock0 => ram_block1a4.CLK0
-clock0 => ram_block1a5.CLK0
-clock0 => ram_block1a6.CLK0
-clock0 => ram_block1a7.CLK0
-q_a[0] <= ram_block1a0.PORTADATAOUT
-q_a[1] <= ram_block1a1.PORTADATAOUT
-q_a[2] <= ram_block1a2.PORTADATAOUT
-q_a[3] <= ram_block1a3.PORTADATAOUT
-q_a[4] <= ram_block1a4.PORTADATAOUT
-q_a[5] <= ram_block1a5.PORTADATAOUT
-q_a[6] <= ram_block1a6.PORTADATAOUT
-q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
 |DC_final|light:l
