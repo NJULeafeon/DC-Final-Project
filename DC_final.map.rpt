@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DC_final
-Mon Dec 03 14:07:07 2018
+Mon Dec 03 14:22:25 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -34,20 +34,21 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  26. Parameter Settings for Inferred Entity Instance: exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0
  27. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Mod0
  28. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Div0
- 29. altsyncram Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "light:l2"
- 31. Port Connectivity Checks: "light:l"
- 32. Port Connectivity Checks: "exp08:comb_4|ps2_keyboard:p"
- 33. Port Connectivity Checks: "exp08:comb_4"
- 34. Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"
- 35. Port Connectivity Checks: "exp09:comb_3|vga_ctrl:v"
- 36. Port Connectivity Checks: "exp09:comb_3|clkgen:c2"
- 37. Port Connectivity Checks: "exp09:comb_3|clkgen:c"
- 38. Port Connectivity Checks: "exp09:comb_3"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 29. Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Mod1
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "light:l2"
+ 32. Port Connectivity Checks: "light:l"
+ 33. Port Connectivity Checks: "exp08:comb_4|ps2_keyboard:p"
+ 34. Port Connectivity Checks: "exp08:comb_4"
+ 35. Port Connectivity Checks: "exp09:comb_3|ram3:my_ram3"
+ 36. Port Connectivity Checks: "exp09:comb_3|vga_ctrl:v"
+ 37. Port Connectivity Checks: "exp09:comb_3|clkgen:c2"
+ 38. Port Connectivity Checks: "exp09:comb_3|clkgen:c"
+ 39. Port Connectivity Checks: "exp09:comb_3"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -73,13 +74,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 03 14:07:07 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 03 14:22:25 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DC_final                                    ;
 ; Top-level Entity Name           ; DC_final                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 189                                         ;
+; Total registers                 ; 187                                         ;
 ; Total pins                      ; 168                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 53,728                                      ;
@@ -237,6 +238,9 @@ refer to the applicable agreement for further details.
 ; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_ibm.tdf             ;         ;
 ; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_olh.tdf        ;         ;
 ; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_mve.tdf              ;         ;
+; db/lpm_divide_m3m.tdf            ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_m3m.tdf             ;         ;
+; db/sign_div_unsign_plh.tdf       ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_plh.tdf        ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction            ; E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_ove.tdf              ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -245,16 +249,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 262            ;
+; Estimate of Logic utilization (ALMs needed) ; 337            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 468            ;
-;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 50             ;
-;     -- 5 input functions                    ; 44             ;
-;     -- 4 input functions                    ; 100            ;
-;     -- <=3 input functions                  ; 271            ;
+; Combinational ALUT usage for logic          ; 607            ;
+;     -- 7 input functions                    ; 7              ;
+;     -- 6 input functions                    ; 57             ;
+;     -- 5 input functions                    ; 46             ;
+;     -- 4 input functions                    ; 122            ;
+;     -- <=3 input functions                  ; 375            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 189            ;
+; Dedicated logic registers                   ; 187            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 168            ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -264,8 +268,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 121            ;
-; Total fan-out                               ; 2740           ;
-; Average fan-out                             ; 2.63           ;
+; Total fan-out                               ; 3205           ;
+; Average fan-out                             ; 2.72           ;
 +---------------------------------------------+----------------+
 
 
@@ -274,12 +278,12 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |DC_final                                    ; 468 (1)             ; 189 (0)                   ; 53728             ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
+; |DC_final                                    ; 607 (1)             ; 187 (0)                   ; 53728             ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
 ;    |exp08:comb_4|                            ; 67 (20)             ; 57 (18)                   ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4                                                                                                 ; exp08               ; work         ;
 ;       |ps2_keyboard:p|                       ; 47 (47)             ; 39 (39)                   ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p                                                                                  ; ps2_keyboard        ; work         ;
 ;          |altsyncram:fifo_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0                                                            ; altsyncram          ; work         ;
 ;             |altsyncram_lsj1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated                             ; altsyncram_lsj1     ; work         ;
-;    |exp09:comb_3|                            ; 386 (70)            ; 132 (46)                  ; 53664             ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
+;    |exp09:comb_3|                            ; 525 (110)           ; 130 (44)                  ; 53664             ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
 ;       |clkgen:c2|                            ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c2                                                                                       ; clkgen              ; work         ;
 ;       |clkgen:c|                             ; 43 (43)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c                                                                                        ; clkgen              ; work         ;
 ;       |lpm_divide:Div0|                      ; 97 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -290,6 +294,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_h3m:auto_generated|     ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m      ; work         ;
 ;             |sign_div_unsign_klh:divider|    ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
 ;                |alt_u_div_eve:divider|       ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve       ; work         ;
+;       |lpm_divide:Mod1|                      ; 99 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m3m:auto_generated|     ; 99 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
+;             |sign_div_unsign_plh:divider|    ; 99 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
+;                |alt_u_div_ove:divider|       ; 99 (99)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider|alt_u_div_ove:divider ; alt_u_div_ove       ; work         ;
 ;       |ram3:my_ram3|                         ; 0 (0)               ; 0 (0)                     ; 16800             ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3                                                                                    ; ram3                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16800             ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component                                                    ; altsyncram          ; work         ;
 ;             |altsyncram_tqm2:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16800             ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated                     ; altsyncram_tqm2     ; work         ;
@@ -343,7 +351,8 @@ Encoding Type:  One-Hot
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; exp09:comb_3|ascii[2..5,7]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5 ;                                        ;
+; exp09:comb_3|counter[2]               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 6 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -352,7 +361,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 189   ;
+; Total registers                              ; 187   ;
 ; Number of registers using Synchronous Clear  ; 81    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -368,13 +377,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; exp08:comb_4|flag                      ; 2       ;
-; exp09:comb_3|valid_fall[0]             ; 5       ;
-; exp09:comb_3|valid_fall[1]             ; 6       ;
-; exp09:comb_3|pos[0][2]                 ; 2       ;
-; exp09:comb_3|pos[1][3]                 ; 2       ;
-; exp09:comb_3|pos[0][4]                 ; 2       ;
-; exp09:comb_3|pos[1][5]                 ; 2       ;
-; Total number of inverted registers = 7 ;         ;
+; exp09:comb_3|pos[0][2]                 ; 5       ;
+; exp09:comb_3|pos[1][3]                 ; 5       ;
+; exp09:comb_3|pos[0][4]                 ; 5       ;
+; exp09:comb_3|pos[1][5]                 ; 5       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -406,8 +413,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DC_final|exp09:comb_3|vga_ctrl:v|y_cnt[4] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DC_final|exp09:comb_3|counter[1]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DC_final|exp09:comb_3|vga_ctrl:v|y_cnt[8] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DC_final|exp09:comb_3|counter[1]          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |DC_final|exp09:comb_3|position[3]         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -776,6 +784,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: exp09:comb_3|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                             ;
+; LPM_WIDTHD             ; 7              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_m3m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                              ;
 +-------------------------------------------+-------------------------------------------------------------------+
@@ -921,35 +952,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 189                         ;
+; arriav_ff             ; 187                         ;
 ;     ENA               ; 51                          ;
 ;     ENA SCLR          ; 17                          ;
 ;     SCLR              ; 64                          ;
-;     plain             ; 57                          ;
+;     plain             ; 55                          ;
 ; arriav_io_obuf        ; 24                          ;
-; arriav_lcell_comb     ; 472                         ;
-;     arith             ; 234                         ;
-;         0 data inputs ; 20                          ;
+; arriav_lcell_comb     ; 611                         ;
+;     arith             ; 293                         ;
+;         0 data inputs ; 32                          ;
 ;         1 data inputs ; 124                         ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 49                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 235                         ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 53                          ;
+;         4 data inputs ; 61                          ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 311                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 46                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 51                          ;
-;         5 data inputs ; 44                          ;
-;         6 data inputs ; 50                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 79                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 61                          ;
+;         5 data inputs ; 46                          ;
+;         6 data inputs ; 57                          ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 168                         ;
 ; stratixv_ram_block    ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 27.00                       ;
-; Average LUT depth     ; 9.42                        ;
+; Average LUT depth     ; 10.12                       ;
 +-----------------------+-----------------------------+
 
 
@@ -958,7 +989,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -968,7 +999,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Dec 03 14:06:49 2018
+    Info: Processing started: Mon Dec 03 14:22:06 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DC_final -c DC_final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1031,7 +1062,8 @@ Warning (10230): Verilog HDL assignment warning at exp09.v(52): truncated value 
 Warning (10235): Verilog HDL Always Construct warning at exp09.v(53): variable "font_ret" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
 Warning (10235): Verilog HDL Always Construct warning at exp09.v(53): variable "h_addr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
 Warning (10230): Verilog HDL assignment warning at exp09.v(85): truncated value with size 32 to match size of target (12) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 85
-Warning (10230): Verilog HDL assignment warning at exp09.v(92): truncated value with size 32 to match size of target (2) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 92
+Warning (10230): Verilog HDL assignment warning at exp09.v(86): truncated value with size 32 to match size of target (12) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 86
+Warning (10230): Verilog HDL assignment warning at exp09.v(92): truncated value with size 32 to match size of target (3) File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 92
 Warning (10030): Net "falling_ascii.data_a" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
 Warning (10030): Net "falling_ascii.waddr_a[0]" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
 Warning (10030): Net "falling_ascii.we_a" at exp09.v(12) has no driver or initial value, using a default initial value '0' File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 12
@@ -1152,9 +1184,10 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-Info (278001): Inferred 2 megafunctions from design logic
+Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Mod0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 53
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Div0" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 51
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "exp09:comb_3|Mod1" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 86
 Info (12130): Elaborated megafunction instantiation "exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0"
 Info (12133): Instantiated megafunction "exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1197,6 +1230,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_olh File: E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
     Info (12023): Found entity 1: alt_u_div_mve File: E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "exp09:comb_3|lpm_divide:Mod1" File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 86
+Info (12133): Instantiated megafunction "exp09:comb_3|lpm_divide:Mod1" with the following parameter: File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 86
+    Info (12134): Parameter "LPM_WIDTHN" = "12"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
+    Info (12023): Found entity 1: lpm_divide_m3m File: E:/DigitalCurcuitLab/DC-Final-Project/db/lpm_divide_m3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_plh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_plh File: E:/DigitalCurcuitLab/DC-Final-Project/db/sign_div_unsign_plh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: E:/DigitalCurcuitLab/DC-Final-Project/db/alt_u_div_ove.tdf Line: 22
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "PS2_CLK" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 70
     Warning (13040): bidirectional pin "PS2_DAT" has no driver File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 72
@@ -1329,18 +1374,18 @@ Warning (21074): Design contains 31 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 62
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 78
     Warning (15610): No output dependent on input pin "IRDA_RXD" File: E:/DigitalCurcuitLab/DC-Final-Project/DC_final.v Line: 86
-Info (21057): Implemented 762 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 880 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 112 output pins
     Info (21060): Implemented 24 bidirectional pins
-    Info (21061): Implemented 568 logic cells
+    Info (21061): Implemented 686 logic cells
     Info (21064): Implemented 25 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 183 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Mon Dec 03 14:07:07 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 184 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Mon Dec 03 14:22:25 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +------------------------------------------+

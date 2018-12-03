@@ -82,8 +82,8 @@ begin
                                begin
                                    status <= 2'd2;
                                    ascii <= falling_ascii[counter];
-                                   if ( pos[counter] + 70 <= 2100 ) pos[counter] <= pos[counter] + 70;
-                                   else valid_fall[counter] <= 0;
+                                   if ( pos[counter] + 70 <= 2100 ) pos[counter] = pos[counter] + 70;
+                                   else pos[counter] = pos[counter] % 70;
                                    position <= pos[counter];
                            end	
                            2'd2:
