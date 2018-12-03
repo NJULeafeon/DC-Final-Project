@@ -101,7 +101,7 @@ wire [11:0] index;
 //=======================================================
 //  Structural coding
 //=======================================================
-exp09(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,ascii,index);
+exp09(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,index);
 exp08(CLOCK_50,1'b1,PS2_CLK,PS2_DAT,ascii,code_reg);
 light l(.data(index[7:0]),.out_h(HEX1),.out_l(HEX0),.enable(1'b1));
 light l2(.data(code_reg),.out_h(HEX3),.out_l(HEX2),.enable(1'b1));

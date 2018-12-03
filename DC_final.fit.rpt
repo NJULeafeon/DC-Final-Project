@@ -1,5 +1,5 @@
 Fitter report for DC_final
-Sun Dec 02 22:45:42 2018
+Mon Dec 03 12:44:21 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -66,19 +66,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Dec 02 22:45:42 2018       ;
+; Fitter Status                   ; Successful - Mon Dec 03 12:44:21 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DC_final                                    ;
 ; Top-level Entity Name           ; DC_final                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 319 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 176                                         ;
+; Logic utilization (in ALMs)     ; 241 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 167                                         ;
 ; Total pins                      ; 168 / 499 ( 34 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 55,776 / 5,662,720 ( < 1 % )                ;
-; Total RAM Blocks                ; 11 / 553 ( 2 % )                            ;
+; Total block memory bits         ; 53,728 / 5,662,720 ( < 1 % )                ;
+; Total RAM Blocks                ; 10 / 553 ( 2 % )                            ;
 ; Total DSP Blocks                ; 1 / 112 ( < 1 % )                           ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
@@ -156,14 +156,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
-;     Processor 3            ;   1.3%      ;
-;     Processor 4            ;   1.3%      ;
+;     Processor 2            ;   1.2%      ;
+;     Processor 3            ;   1.1%      ;
+;     Processor 4            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -173,32 +173,31 @@ refer to the applicable agreement for further details.
 ; Node                                 ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                               ; Destination Port ; Destination Port Name ;
 +--------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------+------------------+-----------------------+
 ; CLOCK_50~inputCLKENA0                ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                ;                  ;                       ;
-; exp08:comb_4|count_clk[0]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp08:comb_4|count_clk[0]~DUPLICATE            ;                  ;                       ;
+; exp08:comb_4|count_clk[1]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp08:comb_4|count_clk[1]~DUPLICATE            ;                  ;                       ;
 ; exp08:comb_4|ps2_keyboard:p|count[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp08:comb_4|ps2_keyboard:p|count[0]~DUPLICATE ;                  ;                       ;
-; exp08:comb_4|ps2_keyboard:p|count[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp08:comb_4|ps2_keyboard:p|count[1]~DUPLICATE ;                  ;                       ;
 ; exp08:comb_4|ps2_keyboard:p|count[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp08:comb_4|ps2_keyboard:p|count[3]~DUPLICATE ;                  ;                       ;
-; exp09:comb_3|index[2]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|index[2]~DUPLICATE                ;                  ;                       ;
-; exp09:comb_3|index[4]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|index[4]~DUPLICATE                ;                  ;                       ;
-; exp09:comb_3|index[7]                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|index[7]~DUPLICATE                ;                  ;                       ;
-; exp09:comb_3|vga_ctrl:v|x_cnt[0]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|vga_ctrl:v|x_cnt[0]~DUPLICATE     ;                  ;                       ;
-; exp09:comb_3|vga_ctrl:v|x_cnt[7]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|vga_ctrl:v|x_cnt[7]~DUPLICATE     ;                  ;                       ;
-; exp09:comb_3|vga_ctrl:v|y_cnt[2]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|vga_ctrl:v|y_cnt[2]~DUPLICATE     ;                  ;                       ;
+; exp09:comb_3|pos[6]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|pos[6]~DUPLICATE                  ;                  ;                       ;
+; exp09:comb_3|pos[7]                  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|pos[7]~DUPLICATE                  ;                  ;                       ;
+; exp09:comb_3|pos[10]                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|pos[10]~DUPLICATE                 ;                  ;                       ;
+; exp09:comb_3|pos[11]                 ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|pos[11]~DUPLICATE                 ;                  ;                       ;
+; exp09:comb_3|vga_ctrl:v|x_cnt[4]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|vga_ctrl:v|x_cnt[4]~DUPLICATE     ;                  ;                       ;
+; exp09:comb_3|vga_ctrl:v|x_cnt[8]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; exp09:comb_3|vga_ctrl:v|x_cnt[8]~DUPLICATE     ;                  ;                       ;
 +--------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------+------------------+-----------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                      ;
-+---------------------+---------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+---------------------+----------------------------+--------------------------+
-; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1160 ) ; 0.00 % ( 0 / 1160 )        ; 0.00 % ( 0 / 1160 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1160 ) ; 0.00 % ( 0 / 1160 )        ; 0.00 % ( 0 / 1160 )      ;
-;                     ;                     ;                            ;                          ;
-; Routing (by net)    ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+---------------------+----------------------------+--------------------------+
++--------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                     ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Placement (by node) ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 987 ) ; 0.00 % ( 0 / 987 )         ; 0.00 % ( 0 / 987 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 987 ) ; 0.00 % ( 0 / 987 )         ; 0.00 % ( 0 / 987 )       ;
+;                     ;                    ;                            ;                          ;
+; Routing (by net)    ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+--------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,7 +215,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1160 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 987 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -232,41 +231,41 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 +-------------------------------------------------------------+---------------------+-------+
 ; Resource                                                    ; Usage               ; %     ;
 +-------------------------------------------------------------+---------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 319 / 41,910        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 319                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 330 / 41,910        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 70                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 246                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 241 / 41,910        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 241                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 252 / 41,910        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 66                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 172                 ;       ;
 ;         [c] ALMs used for registers                         ; 14                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                   ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 41,910         ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910          ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 41,910         ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 41,910          ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                   ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                   ;       ;
-;         [c] Due to LAB input limits                         ; 0                   ;       ;
+;         [c] Due to LAB input limits                         ; 3                   ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                   ;       ;
 ;                                                             ;                     ;       ;
 ; Difficulty packing design                                   ; Low                 ;       ;
 ;                                                             ;                     ;       ;
-; Total LABs:  partially or completely used                   ; 43 / 4,191          ; 1 %   ;
-;     -- Logic LABs                                           ; 43                  ;       ;
+; Total LABs:  partially or completely used                   ; 45 / 4,191          ; 1 %   ;
+;     -- Logic LABs                                           ; 45                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                   ;       ;
 ;                                                             ;                     ;       ;
-; Combinational ALUT usage for logic                          ; 599                 ;       ;
+; Combinational ALUT usage for logic                          ; 442                 ;       ;
 ;     -- 7 input functions                                    ; 3                   ;       ;
-;     -- 6 input functions                                    ; 47                  ;       ;
-;     -- 5 input functions                                    ; 45                  ;       ;
-;     -- 4 input functions                                    ; 135                 ;       ;
-;     -- <=3 input functions                                  ; 369                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 2                   ;       ;
+;     -- 6 input functions                                    ; 43                  ;       ;
+;     -- 5 input functions                                    ; 39                  ;       ;
+;     -- 4 input functions                                    ; 98                  ;       ;
+;     -- <=3 input functions                                  ; 259                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 11                  ;       ;
 ;                                                             ;                     ;       ;
-; Dedicated logic registers                                   ; 176                 ;       ;
+; Dedicated logic registers                                   ; 167                 ;       ;
 ;     -- By type:                                             ;                     ;       ;
-;         -- Primary logic registers                          ; 166 / 83,820        ; < 1 % ;
-;         -- Secondary logic registers                        ; 10 / 83,820         ; < 1 % ;
+;         -- Primary logic registers                          ; 158 / 83,820        ; < 1 % ;
+;         -- Secondary logic registers                        ; 9 / 83,820          ; < 1 % ;
 ;     -- By function:                                         ;                     ;       ;
-;         -- Design implementation registers                  ; 166                 ;       ;
-;         -- Routing optimization registers                   ; 10                  ;       ;
+;         -- Design implementation registers                  ; 158                 ;       ;
+;         -- Routing optimization registers                   ; 9                   ;       ;
 ;                                                             ;                     ;       ;
 ; Virtual pins                                                ; 0                   ;       ;
 ; I/O pins                                                    ; 168 / 499           ; 34 %  ;
@@ -300,10 +299,10 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 ;     -- UART                                                 ; 0 / 2 ( 0 % )       ;       ;
 ;     -- USB                                                  ; 0 / 2 ( 0 % )       ;       ;
 ;                                                             ;                     ;       ;
-; M10K blocks                                                 ; 11 / 553            ; 2 %   ;
+; M10K blocks                                                 ; 10 / 553            ; 2 %   ;
 ; Total MLAB memory bits                                      ; 0                   ;       ;
-; Total block memory bits                                     ; 55,776 / 5,662,720  ; < 1 % ;
-; Total block memory implementation bits                      ; 112,640 / 5,662,720 ; 2 %   ;
+; Total block memory bits                                     ; 53,728 / 5,662,720  ; < 1 % ;
+; Total block memory implementation bits                      ; 102,400 / 5,662,720 ; 2 %   ;
 ;                                                             ;                     ;       ;
 ; Total DSP Blocks                                            ; 1 / 112             ; < 1 % ;
 ;                                                             ;                     ;       ;
@@ -327,12 +326,12 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 ; Channel PLLs                                                ; 0 / 9               ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4               ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2               ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2%  ;       ;
-; Peak interconnect usage (total/H/V)                         ; 6.6% / 6.8% / 5.9%  ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.1%  ;       ;
+; Peak interconnect usage (total/H/V)                         ; 4.3% / 4.5% / 3.5%  ;       ;
 ; Maximum fan-out                                             ; 118                 ;       ;
 ; Highest non-global fan-out                                  ; 118                 ;       ;
-; Total fan-out                                               ; 2831                ;       ;
-; Average fan-out                                             ; 2.46                ;       ;
+; Total fan-out                                               ; 2303                ;       ;
+; Average fan-out                                             ; 2.32                ;       ;
 +-------------------------------------------------------------+---------------------+-------+
 
 
@@ -341,52 +340,52 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 319 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 319                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 330 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 70                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 246                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 241 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 241                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 252 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 66                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 172                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 14                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )     ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 14 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 3 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
-;         [c] Due to LAB input limits                         ; 0                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 3                     ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 43 / 4191 ( 1 % )     ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 43                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 45 / 4191 ( 1 % )     ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 45                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 599                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 442                   ; 0                              ;
 ;     -- 7 input functions                                    ; 3                     ; 0                              ;
-;     -- 6 input functions                                    ; 47                    ; 0                              ;
-;     -- 5 input functions                                    ; 45                    ; 0                              ;
-;     -- 4 input functions                                    ; 135                   ; 0                              ;
-;     -- <=3 input functions                                  ; 369                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 2                     ; 0                              ;
+;     -- 6 input functions                                    ; 43                    ; 0                              ;
+;     -- 5 input functions                                    ; 39                    ; 0                              ;
+;     -- 4 input functions                                    ; 98                    ; 0                              ;
+;     -- <=3 input functions                                  ; 259                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 11                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 166 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 10 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 158 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 9 / 83820 ( < 1 % )   ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 166                   ; 0                              ;
-;         -- Routing optimization registers                   ; 10                    ; 0                              ;
+;         -- Design implementation registers                  ; 158                   ; 0                              ;
+;         -- Routing optimization registers                   ; 9                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
 ; I/O pins                                                    ; 168                   ; 0                              ;
 ; I/O registers                                               ; 0                     ; 0                              ;
-; Total block memory bits                                     ; 55776                 ; 0                              ;
-; Total block memory implementation bits                      ; 112640                ; 0                              ;
-; M10K block                                                  ; 11 / 553 ( 1 % )      ; 0 / 553 ( 0 % )                ;
+; Total block memory bits                                     ; 53728                 ; 0                              ;
+; Total block memory implementation bits                      ; 102400                ; 0                              ;
+; M10K block                                                  ; 10 / 553 ( 1 % )      ; 0 / 553 ( 0 % )                ;
 ; DSP block                                                   ; 1 / 112 ( < 1 % )     ; 0 / 112 ( 0 % )                ;
 ; Clock enable block                                          ; 1 / 116 ( < 1 % )     ; 0 / 116 ( 0 % )                ;
 ;                                                             ;                       ;                                ;
@@ -397,8 +396,8 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 2998                  ; 0                              ;
-;     -- Registered Connections                               ; 814                   ; 0                              ;
+;     -- Total Connections                                    ; 2463                  ; 0                              ;
+;     -- Registered Connections                               ; 687                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 48                    ; 0                              ;
@@ -435,7 +434,7 @@ The pin-out file can be found in E:/14A/digital circuit/DC_final/DC_final.pin.
 ; CLOCK2_50  ; AA16  ; 4A       ; 56           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK3_50  ; Y26   ; 5B       ; 89           ; 25           ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK4_50  ; K14   ; 8A       ; 32           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 119                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 117                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; IRDA_RXD   ; W20   ; 5A       ; 89           ; 6            ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]     ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]     ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
@@ -1694,37 +1693,29 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name         ; Library Name ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |DC_final                                    ; 319.0 (0.5)          ; 328.5 (0.5)                      ; 9.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 599 (1)             ; 176 (0)                   ; 0 (0)         ; 55776             ; 11    ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
-;    |exp08:comb_4|                            ; 38.0 (13.0)          ; 45.0 (14.2)                      ; 7.0 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 67 (20)             ; 61 (19)                   ; 0 (0)         ; 2112              ; 2     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4                                                                                                 ; exp08               ; work         ;
-;       |ps2_keyboard:p|                       ; 25.0 (25.0)          ; 30.8 (30.8)                      ; 5.8 (5.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (47)             ; 42 (42)                   ; 0 (0)         ; 64                ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p                                                                                  ; ps2_keyboard        ; work         ;
+; |DC_final                                    ; 240.5 (0.5)          ; 250.5 (0.5)                      ; 12.5 (0.0)                                        ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 442 (1)             ; 167 (0)                   ; 0 (0)         ; 53728             ; 10    ; 1          ; 168  ; 0            ; |DC_final                                                                                                              ; DC_final            ; work         ;
+;    |exp08:comb_4|                            ; 38.0 (13.0)          ; 45.5 (14.2)                      ; 7.5 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 67 (20)             ; 60 (19)                   ; 0 (0)         ; 64                ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4                                                                                                 ; exp08               ; work         ;
+;       |ps2_keyboard:p|                       ; 25.0 (25.0)          ; 31.3 (31.3)                      ; 6.3 (6.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (47)             ; 41 (41)                   ; 0 (0)         ; 64                ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p                                                                                  ; ps2_keyboard        ; work         ;
 ;          |altsyncram:fifo_rtl_0|             ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 64                ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0                                                            ; altsyncram          ; work         ;
 ;             |altsyncram_lsj1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 64                ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated                             ; altsyncram_lsj1     ; work         ;
-;       |rom_ascii:r|                          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|rom_ascii:r                                                                                     ; rom_ascii           ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component                                                     ; altsyncram          ; work         ;
-;             |altsyncram_lhh1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |DC_final|exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated                      ; altsyncram_lhh1     ; work         ;
-;    |exp09:comb_3|                            ; 266.5 (45.7)         ; 269.3 (45.7)                     ; 2.8 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 503 (83)            ; 115 (26)                  ; 0 (0)         ; 53664             ; 9     ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
-;       |clkgen:c|                             ; 24.7 (24.7)          ; 26.0 (26.0)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c                                                                                        ; clkgen              ; work         ;
-;       |clkgen:c2|                            ; 23.3 (23.3)          ; 23.3 (23.3)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c2                                                                                       ; clkgen              ; work         ;
-;       |lpm_divide:Div0|                      ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ibm:auto_generated|     ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
-;             |sign_div_unsign_olh:divider|    ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_mve:divider|       ; 48.5 (48.5)          ; 48.5 (48.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 97 (97)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
-;       |lpm_divide:Mod0|                      ; 36.0 (0.0)           ; 37.0 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_h3m:auto_generated|     ; 36.0 (0.0)           ; 37.0 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m      ; work         ;
-;             |sign_div_unsign_klh:divider|    ; 36.0 (0.0)           ; 37.0 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
-;                |alt_u_div_eve:divider|       ; 36.0 (36.0)          ; 37.0 (37.0)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 70 (70)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve       ; work         ;
-;       |lpm_divide:Mod1|                      ; 50.5 (0.0)           ; 51.2 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 104 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_m3m:auto_generated|     ; 50.5 (0.0)           ; 51.2 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 104 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
-;             |sign_div_unsign_plh:divider|    ; 50.5 (0.0)           ; 51.2 (0.0)                       ; 0.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 104 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
-;                |alt_u_div_ove:divider|       ; 50.5 (50.5)          ; 51.2 (51.2)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 104 (104)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider|alt_u_div_ove:divider ; alt_u_div_ove       ; work         ;
+;    |exp09:comb_3|                            ; 195.0 (23.4)         ; 197.5 (23.1)                     ; 5.0 (0.0)                                         ; 2.5 (0.3)                        ; 0.0 (0.0)            ; 360 (44)            ; 107 (19)                  ; 0 (0)         ; 53664             ; 9     ; 1          ; 0    ; 0            ; |DC_final|exp09:comb_3                                                                                                 ; exp09               ; work         ;
+;       |clkgen:c|                             ; 25.0 (25.0)          ; 25.5 (25.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c                                                                                        ; clkgen              ; work         ;
+;       |clkgen:c2|                            ; 22.5 (22.5)          ; 23.0 (23.0)                      ; 0.7 (0.7)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 41 (41)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|clkgen:c2                                                                                       ; clkgen              ; work         ;
+;       |lpm_divide:Div0|                      ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.2 (0.0)                                         ; 0.1 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ibm:auto_generated|     ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.2 (0.0)                                         ; 0.1 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
+;             |sign_div_unsign_olh:divider|    ; 48.5 (0.0)           ; 48.5 (0.0)                       ; 0.2 (0.0)                                         ; 0.1 (0.0)                        ; 0.0 (0.0)            ; 97 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|       ; 48.5 (48.5)          ; 48.5 (48.5)                      ; 0.2 (0.2)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 97 (97)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Mod0|                      ; 37.2 (0.0)           ; 38.0 (0.0)                       ; 1.7 (0.0)                                         ; 0.9 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_h3m:auto_generated|     ; 37.2 (0.0)           ; 38.0 (0.0)                       ; 1.7 (0.0)                                         ; 0.9 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                   ; lpm_divide_h3m      ; work         ;
+;             |sign_div_unsign_klh:divider|    ; 37.2 (0.0)           ; 38.0 (0.0)                       ; 1.7 (0.0)                                         ; 0.9 (0.0)                        ; 0.0 (0.0)            ; 70 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;                |alt_u_div_eve:divider|       ; 37.2 (37.2)          ; 38.0 (38.0)                      ; 1.7 (1.7)                                         ; 0.9 (0.9)                        ; 0.0 (0.0)            ; 70 (70)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider ; alt_u_div_eve       ; work         ;
 ;       |ram3:my_ram3|                         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16800             ; 4     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3                                                                                    ; ram3                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16800             ; 4     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component                                                    ; altsyncram          ; work         ;
 ;             |altsyncram_tqm2:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 16800             ; 4     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated                     ; altsyncram_tqm2     ; work         ;
 ;       |rom_font:my_rom_font|                 ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 36864             ; 5     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|rom_font:my_rom_font                                                                            ; rom_font            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 36864             ; 5     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component                                            ; altsyncram          ; work         ;
 ;             |altsyncram_e8h1:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 36864             ; 5     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated             ; altsyncram_e8h1     ; work         ;
-;       |vga_ctrl:v|                           ; 36.5 (36.5)          ; 37.5 (37.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 65 (65)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|vga_ctrl:v                                                                                      ; vga_ctrl            ; work         ;
-;    |light:l|                                 ; 6.8 (6.8)            ; 6.8 (6.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|light:l                                                                                                      ; light               ; work         ;
+;       |vga_ctrl:v|                           ; 37.4 (37.4)          ; 39.4 (39.4)                      ; 3.1 (3.1)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 65 (65)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|exp09:comb_3|vga_ctrl:v                                                                                      ; vga_ctrl            ; work         ;
 ;    |light:l2|                                ; 7.0 (7.0)            ; 7.0 (7.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |DC_final|light:l2                                                                                                     ; light               ; work         ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1906,108 +1897,105 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                   ;
-+----------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                ; Pad To Core Index ; Setting ;
-+----------------------------------------------------+-------------------+---------+
-; CLOCK2_50                                          ;                   ;         ;
-; CLOCK3_50                                          ;                   ;         ;
-; CLOCK4_50                                          ;                   ;         ;
-; KEY[0]                                             ;                   ;         ;
-; KEY[1]                                             ;                   ;         ;
-; KEY[2]                                             ;                   ;         ;
-; KEY[3]                                             ;                   ;         ;
-; SW[0]                                              ;                   ;         ;
-; SW[1]                                              ;                   ;         ;
-; SW[2]                                              ;                   ;         ;
-; SW[3]                                              ;                   ;         ;
-; SW[4]                                              ;                   ;         ;
-; SW[5]                                              ;                   ;         ;
-; SW[6]                                              ;                   ;         ;
-; SW[7]                                              ;                   ;         ;
-; SW[8]                                              ;                   ;         ;
-; SW[9]                                              ;                   ;         ;
-; TD_CLK27                                           ;                   ;         ;
-; TD_DATA[0]                                         ;                   ;         ;
-; TD_DATA[1]                                         ;                   ;         ;
-; TD_DATA[2]                                         ;                   ;         ;
-; TD_DATA[3]                                         ;                   ;         ;
-; TD_DATA[4]                                         ;                   ;         ;
-; TD_DATA[5]                                         ;                   ;         ;
-; TD_DATA[6]                                         ;                   ;         ;
-; TD_DATA[7]                                         ;                   ;         ;
-; TD_HS                                              ;                   ;         ;
-; TD_VS                                              ;                   ;         ;
-; AUD_ADCDAT                                         ;                   ;         ;
-; ADC_DOUT                                           ;                   ;         ;
-; IRDA_RXD                                           ;                   ;         ;
-; DRAM_DQ[0]                                         ;                   ;         ;
-; DRAM_DQ[1]                                         ;                   ;         ;
-; DRAM_DQ[2]                                         ;                   ;         ;
-; DRAM_DQ[3]                                         ;                   ;         ;
-; DRAM_DQ[4]                                         ;                   ;         ;
-; DRAM_DQ[5]                                         ;                   ;         ;
-; DRAM_DQ[6]                                         ;                   ;         ;
-; DRAM_DQ[7]                                         ;                   ;         ;
-; DRAM_DQ[8]                                         ;                   ;         ;
-; DRAM_DQ[9]                                         ;                   ;         ;
-; DRAM_DQ[10]                                        ;                   ;         ;
-; DRAM_DQ[11]                                        ;                   ;         ;
-; DRAM_DQ[12]                                        ;                   ;         ;
-; DRAM_DQ[13]                                        ;                   ;         ;
-; DRAM_DQ[14]                                        ;                   ;         ;
-; DRAM_DQ[15]                                        ;                   ;         ;
-; AUD_ADCLRCK                                        ;                   ;         ;
-; AUD_BCLK                                           ;                   ;         ;
-; AUD_DACLRCK                                        ;                   ;         ;
-; PS2_CLK2                                           ;                   ;         ;
-; PS2_DAT2                                           ;                   ;         ;
-; FPGA_I2C_SDAT                                      ;                   ;         ;
-; PS2_CLK                                            ;                   ;         ;
-;      - exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[0] ; 0                 ; 0       ;
-; PS2_DAT                                            ;                   ;         ;
-;      - exp08:comb_4|ps2_keyboard:p|fifo~10         ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[1]~0     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[0]~1     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[2]~2     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[3]~3     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[4]~4     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[5]~5     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[6]~6     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[7]~7     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[8]~8     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|buffer[9]~9     ; 1                 ; 0       ;
-;      - exp08:comb_4|ps2_keyboard:p|fifo~11         ; 1                 ; 0       ;
-; CLOCK_50                                           ;                   ;         ;
-;      - exp09:comb_3|clkgen:c|clkout                ; 0                 ; 0       ;
-;      - exp09:comb_3|clkgen:c2|clkout               ; 0                 ; 0       ;
-;      - exp08:comb_4|clk_ls                         ; 0                 ; 0       ;
-+----------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                          ;
++-----------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                       ; Pad To Core Index ; Setting ;
++-----------------------------------------------------------+-------------------+---------+
+; CLOCK2_50                                                 ;                   ;         ;
+; CLOCK3_50                                                 ;                   ;         ;
+; CLOCK4_50                                                 ;                   ;         ;
+; KEY[0]                                                    ;                   ;         ;
+; KEY[1]                                                    ;                   ;         ;
+; KEY[2]                                                    ;                   ;         ;
+; KEY[3]                                                    ;                   ;         ;
+; SW[0]                                                     ;                   ;         ;
+; SW[1]                                                     ;                   ;         ;
+; SW[2]                                                     ;                   ;         ;
+; SW[3]                                                     ;                   ;         ;
+; SW[4]                                                     ;                   ;         ;
+; SW[5]                                                     ;                   ;         ;
+; SW[6]                                                     ;                   ;         ;
+; SW[7]                                                     ;                   ;         ;
+; SW[8]                                                     ;                   ;         ;
+; SW[9]                                                     ;                   ;         ;
+; TD_CLK27                                                  ;                   ;         ;
+; TD_DATA[0]                                                ;                   ;         ;
+; TD_DATA[1]                                                ;                   ;         ;
+; TD_DATA[2]                                                ;                   ;         ;
+; TD_DATA[3]                                                ;                   ;         ;
+; TD_DATA[4]                                                ;                   ;         ;
+; TD_DATA[5]                                                ;                   ;         ;
+; TD_DATA[6]                                                ;                   ;         ;
+; TD_DATA[7]                                                ;                   ;         ;
+; TD_HS                                                     ;                   ;         ;
+; TD_VS                                                     ;                   ;         ;
+; AUD_ADCDAT                                                ;                   ;         ;
+; ADC_DOUT                                                  ;                   ;         ;
+; IRDA_RXD                                                  ;                   ;         ;
+; DRAM_DQ[0]                                                ;                   ;         ;
+; DRAM_DQ[1]                                                ;                   ;         ;
+; DRAM_DQ[2]                                                ;                   ;         ;
+; DRAM_DQ[3]                                                ;                   ;         ;
+; DRAM_DQ[4]                                                ;                   ;         ;
+; DRAM_DQ[5]                                                ;                   ;         ;
+; DRAM_DQ[6]                                                ;                   ;         ;
+; DRAM_DQ[7]                                                ;                   ;         ;
+; DRAM_DQ[8]                                                ;                   ;         ;
+; DRAM_DQ[9]                                                ;                   ;         ;
+; DRAM_DQ[10]                                               ;                   ;         ;
+; DRAM_DQ[11]                                               ;                   ;         ;
+; DRAM_DQ[12]                                               ;                   ;         ;
+; DRAM_DQ[13]                                               ;                   ;         ;
+; DRAM_DQ[14]                                               ;                   ;         ;
+; DRAM_DQ[15]                                               ;                   ;         ;
+; AUD_ADCLRCK                                               ;                   ;         ;
+; AUD_BCLK                                                  ;                   ;         ;
+; AUD_DACLRCK                                               ;                   ;         ;
+; PS2_CLK2                                                  ;                   ;         ;
+; PS2_DAT2                                                  ;                   ;         ;
+; FPGA_I2C_SDAT                                             ;                   ;         ;
+; PS2_CLK                                                   ;                   ;         ;
+;      - exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[0]~feeder ; 0                 ; 0       ;
+; PS2_DAT                                                   ;                   ;         ;
+;      - exp08:comb_4|ps2_keyboard:p|fifo~10                ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[1]~0            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[0]~1            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[2]~2            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[3]~3            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[4]~4            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[5]~5            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[6]~6            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[7]~7            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[8]~8            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|buffer[9]~9            ; 1                 ; 0       ;
+;      - exp08:comb_4|ps2_keyboard:p|fifo~11                ; 1                 ; 0       ;
+; CLOCK_50                                                  ;                   ;         ;
+;      - exp09:comb_3|clkgen:c|clkout                       ; 0                 ; 0       ;
+;      - exp08:comb_4|clk_ls                                ; 0                 ; 0       ;
++-----------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                      ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                   ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                               ; PIN_AF14            ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50                               ; PIN_AF14            ; 116     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; exp08:comb_4|clk_ls                    ; FF_X36_Y4_N38       ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; exp08:comb_4|code_reg~0                ; LABCELL_X37_Y4_N30  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; exp08:comb_4|ps2_keyboard:p|fifo~10    ; LABCELL_X40_Y6_N21  ; 4       ; Write enable ; no     ; --                   ; --               ; --                        ;
-; exp08:comb_4|ps2_keyboard:p|r_ptr[0]~0 ; LABCELL_X42_Y6_N12  ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; exp08:comb_4|ps2_keyboard:p|ready      ; FF_X42_Y6_N50       ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; exp08:comb_4|ps2_keyboard:p|sampling   ; LABCELL_X46_Y6_N36  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|Equal3~2                  ; LABCELL_X55_Y1_N12  ; 14      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|clkgen:c2|LessThan0~7     ; LABCELL_X53_Y5_N54  ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|clkgen:c2|clkout          ; FF_X50_Y3_N44       ; 31      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|clkgen:c|LessThan0~4      ; LABCELL_X50_Y4_N48  ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|clkgen:c|clkout           ; FF_X50_Y4_N41       ; 34      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|index[11]~1               ; LABCELL_X50_Y2_N51  ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|vga_ctrl:v|Equal0~2       ; MLABCELL_X47_Y4_N57 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; exp09:comb_3|vga_ctrl:v|always1~2      ; MLABCELL_X47_Y4_N51 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                     ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                   ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                               ; PIN_AF14           ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                               ; PIN_AF14           ; 115     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; exp08:comb_4|clk_ls                    ; FF_X67_Y1_N14      ; 11      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; exp08:comb_4|code_reg~0                ; LABCELL_X68_Y1_N30 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; exp08:comb_4|ps2_keyboard:p|fifo~10    ; LABCELL_X70_Y5_N39 ; 4       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; exp08:comb_4|ps2_keyboard:p|r_ptr[0]~0 ; LABCELL_X68_Y2_N18 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp08:comb_4|ps2_keyboard:p|ready      ; FF_X68_Y2_N59      ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp08:comb_4|ps2_keyboard:p|sampling   ; LABCELL_X71_Y5_N30 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|clkgen:c2|LessThan0~7     ; LABCELL_X53_Y3_N54 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|clkgen:c|LessThan0~4      ; LABCELL_X57_Y4_N42 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|clkgen:c|clkout           ; FF_X57_Y4_N53      ; 52      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|pos[1]~0                  ; LABCELL_X57_Y2_N15 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|vga_ctrl:v|Equal0~2       ; LABCELL_X61_Y4_N27 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; exp09:comb_3|vga_ctrl:v|always1~2      ; LABCELL_X61_Y4_N18 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -2015,20 +2003,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AF14 ; 116     ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_AF14 ; 115     ; Global Clock         ; GCLK6            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
-+-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+----------------------------------+
-; Name                                                                                                        ; Type       ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF               ; Location                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs                    ;
-+-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+----------------------------------+
-; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ALTSYNCRAM                 ; AUTO       ; Simple Dual Port ; Single Clock ; 8            ; 8            ; 8            ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 64    ; 8                           ; 8                           ; 8                           ; 8                           ; 64                  ; 1           ; 0     ; None              ; M10K_X38_Y6_N0                                                                 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Port Usage      ;
-; exp08:comb_4|rom_ascii:r|altsyncram:altsyncram_component|altsyncram_lhh1:auto_generated|ALTSYNCRAM          ; M10K block ; ROM              ; Single Clock ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048  ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1           ; 0     ; scancode.mif      ; M10K_X69_Y4_N0                                                                 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Block Type Set to Block RAM ;
-; exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated|ALTSYNCRAM         ; M10K block ; True Dual Port   ; Dual Clocks  ; 2100         ; 8            ; 2100         ; 8            ; yes                    ; yes                     ; yes                    ; yes                     ; 16800 ; 2100                        ; 8                           ; 2100                        ; 8                           ; 16800               ; 4           ; 0     ; vga_init_i386.mif ; M10K_X49_Y5_N0, M10K_X49_Y6_N0, M10K_X49_Y3_N0, M10K_X49_Y4_N0                 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode            ;
-; exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated|ALTSYNCRAM ; M10K block ; ROM              ; Single Clock ; 4096         ; 9            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 36864 ; 4096                        ; 9                           ; --                          ; --                          ; 36864               ; 5           ; 0     ; font.mif          ; M10K_X49_Y8_N0, M10K_X41_Y4_N0, M10K_X49_Y7_N0, M10K_X49_Y1_N0, M10K_X49_Y2_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide            ;
-+-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------------+
+; Name                                                                                                        ; Type       ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF               ; Location                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs               ;
++-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------------+
+; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ALTSYNCRAM                 ; AUTO       ; Simple Dual Port ; Single Clock ; 8            ; 8            ; 8            ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 64    ; 8                           ; 8                           ; 8                           ; 8                           ; 64                  ; 1           ; 0     ; None              ; M10K_X69_Y1_N0                                                                 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Port Usage ;
+; exp09:comb_3|ram3:my_ram3|altsyncram:altsyncram_component|altsyncram_tqm2:auto_generated|ALTSYNCRAM         ; M10K block ; True Dual Port   ; Single Clock ; 2100         ; 8            ; 2100         ; 8            ; yes                    ; yes                     ; yes                    ; yes                     ; 16800 ; 2100                        ; 8                           ; 2100                        ; 8                           ; 16800               ; 4           ; 0     ; vga_init_i386.mif ; M10K_X58_Y3_N0, M10K_X58_Y4_N0, M10K_X58_Y2_N0, M10K_X58_Y1_N0                 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Unsupported Mode       ;
+; exp09:comb_3|rom_font:my_rom_font|altsyncram:altsyncram_component|altsyncram_e8h1:auto_generated|ALTSYNCRAM ; M10K block ; ROM              ; Single Clock ; 4096         ; 9            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 36864 ; 4096                        ; 9                           ; --                          ; --                          ; 36864               ; 5           ; 0     ; font.mif          ; M10K_X49_Y4_N0, M10K_X58_Y5_N0, M10K_X49_Y5_N0, M10K_X49_Y3_N0, M10K_X58_Y6_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide       ;
++-------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+-------------------+--------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -2049,7 +2036,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 ; Name                 ; Mode            ; Location      ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
 +----------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
-; exp09:comb_3|Mult0~8 ; Independent 9x9 ; DSP_X54_Y6_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; exp09:comb_3|Mult0~8 ; Independent 9x9 ; DSP_X54_Y4_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
 +----------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
@@ -2058,14 +2045,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 951 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 742 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 1 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 293 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 122 / 56,300 ( < 1 % )  ;
+; C2 interconnects                            ; 207 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 93 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 179 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 151 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -2121,13 +2108,13 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 242 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 181 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 30 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 27 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 414 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 428 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 3 / 360 ( < 1 % )       ;
+; R14 interconnects                           ; 16 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 14 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 294 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 306 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
 
@@ -2409,101 +2396,118 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 23.9              ;
+; CLOCK_50        ; CLOCK_50             ; 31.6              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                                      ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                             ; Destination Register                                                                                             ; Delay Added in ns ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------------+
-; exp08:comb_4|count_clk[5]                   ; exp08:comb_4|clk_ls                                                                                              ; 1.047             ;
-; exp08:comb_4|count_clk[3]                   ; exp08:comb_4|clk_ls                                                                                              ; 1.039             ;
-; exp08:comb_4|count_clk[6]                   ; exp08:comb_4|clk_ls                                                                                              ; 1.026             ;
-; exp08:comb_4|count_clk[4]                   ; exp08:comb_4|clk_ls                                                                                              ; 0.954             ;
-; exp08:comb_4|count_clk[2]                   ; exp08:comb_4|clk_ls                                                                                              ; 0.784             ;
-; exp08:comb_4|count_clk[1]                   ; exp08:comb_4|clk_ls                                                                                              ; 0.784             ;
-; exp08:comb_4|count_clk[0]                   ; exp08:comb_4|clk_ls                                                                                              ; 0.784             ;
-; exp08:comb_4|clk_ls                         ; exp08:comb_4|clk_ls                                                                                              ; 0.784             ;
-; exp09:comb_3|clkgen:c|clkcount[21]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.512             ;
-; exp09:comb_3|clkgen:c|clkcount[23]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.502             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[4]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]                                                                             ; 0.497             ;
-; exp09:comb_3|clkgen:c|clkcount[29]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.473             ;
-; exp09:comb_3|clkgen:c|clkcount[19]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.456             ;
-; exp09:comb_3|clkgen:c|clkcount[7]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.452             ;
-; exp09:comb_3|clkgen:c|clkcount[15]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.446             ;
-; exp09:comb_3|clkgen:c|clkcount[9]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.444             ;
-; exp09:comb_3|clkgen:c|clkcount[1]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.441             ;
-; exp09:comb_3|clkgen:c|clkcount[18]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.425             ;
-; exp09:comb_3|clkgen:c|clkcount[27]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.421             ;
-; exp09:comb_3|clkgen:c|clkcount[20]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.413             ;
-; exp09:comb_3|clkgen:c|clkcount[12]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.412             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[2]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]                                                                             ; 0.411             ;
-; exp09:comb_3|clkgen:c|clkcount[30]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.410             ;
-; exp09:comb_3|clkgen:c|clkcount[5]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.406             ;
-; exp09:comb_3|clkgen:c|clkcount[8]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.404             ;
-; exp09:comb_3|clkgen:c|clkcount[13]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.402             ;
-; exp09:comb_3|clkgen:c|clkcount[3]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.398             ;
-; exp08:comb_4|ps2_keyboard:p|r_ptr[0]        ; exp08:comb_4|ps2_keyboard:p|fifo_rtl_0_bypass[2]                                                                 ; 0.393             ;
-; exp09:comb_3|clkgen:c|clkcount[25]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.389             ;
-; exp09:comb_3|clkgen:c|clkcount[16]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.386             ;
-; exp09:comb_3|clkgen:c|clkcount[28]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.383             ;
-; exp09:comb_3|clkgen:c|clkcount[6]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.383             ;
-; exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[1] ; exp08:comb_4|ps2_keyboard:p|count[2]                                                                             ; 0.378             ;
-; exp08:comb_4|ps2_keyboard:p|count[3]        ; exp08:comb_4|ps2_keyboard:p|count[0]                                                                             ; 0.373             ;
-; exp08:comb_4|ps2_keyboard:p|w_ptr[0]        ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]                                                                             ; 0.371             ;
-; exp09:comb_3|clkgen:c|clkcount[26]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.370             ;
-; exp08:comb_4|ps2_keyboard:p|count[1]        ; exp08:comb_4|ps2_keyboard:p|count[2]                                                                             ; 0.357             ;
-; exp08:comb_4|ps2_keyboard:p|count[0]        ; exp08:comb_4|ps2_keyboard:p|buffer[8]                                                                            ; 0.357             ;
-; exp08:comb_4|ps2_keyboard:p|count[2]        ; exp08:comb_4|ps2_keyboard:p|count[0]                                                                             ; 0.355             ;
-; exp09:comb_3|clkgen:c|clkcount[0]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.347             ;
-; exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[2] ; exp08:comb_4|ps2_keyboard:p|count[2]                                                                             ; 0.346             ;
-; exp08:comb_4|ps2_keyboard:p|r_ptr[1]        ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a5~portb_address_reg0 ; 0.342             ;
-; exp09:comb_3|clkgen:c|clkcount[31]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.337             ;
-; exp09:comb_3|clkgen:c|clkcount[14]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[11]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[4]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[2]           ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[24]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[22]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[10]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkcount[17]          ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp09:comb_3|clkgen:c|clkout                ; exp09:comb_3|clkgen:c|clkout                                                                                     ; 0.318             ;
-; exp08:comb_4|ps2_keyboard:p|w_ptr[1]        ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a2~porta_address_reg0 ; 0.273             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[6]       ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a5~porta_datain_reg0  ; 0.242             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[8]       ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.211             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[7]       ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.196             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[1]       ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a0~porta_datain_reg0  ; 0.177             ;
-; exp08:comb_4|ps2_keyboard:p|w_ptr[2]        ; exp08:comb_4|ps2_keyboard:p|altsyncram:fifo_rtl_0|altsyncram_lsj1:auto_generated|ram_block1a2~porta_address_reg0 ; 0.170             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[3]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]                                                                             ; 0.139             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[5]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]                                                                             ; 0.139             ;
-; exp09:comb_3|clkgen:c2|clkcount[27]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.065             ;
-; exp09:comb_3|clkgen:c2|clkcount[1]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.061             ;
-; exp09:comb_3|clkgen:c2|clkcount[29]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.061             ;
-; exp09:comb_3|clkgen:c2|clkcount[9]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.061             ;
-; exp09:comb_3|clkgen:c2|clkcount[15]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.061             ;
-; exp09:comb_3|clkgen:c2|clkcount[21]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.060             ;
-; exp08:comb_4|ps2_keyboard:p|buffer[9]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[0]                                                                             ; 0.050             ;
-; exp09:comb_3|clkgen:c2|clkcount[19]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.041             ;
-; exp09:comb_3|clkgen:c2|clkcount[7]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.041             ;
-; exp09:comb_3|clkgen:c2|clkcount[18]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.036             ;
-; exp09:comb_3|clkgen:c2|clkcount[12]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.029             ;
-; exp09:comb_3|clkgen:c2|clkcount[20]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.028             ;
-; exp09:comb_3|clkgen:c2|clkcount[8]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.027             ;
-; exp09:comb_3|clkgen:c2|clkcount[5]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.027             ;
-; exp09:comb_3|clkgen:c2|clkcount[28]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.024             ;
-; exp09:comb_3|clkgen:c2|clkcount[25]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.024             ;
-; exp09:comb_3|clkgen:c2|clkcount[13]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.024             ;
-; exp09:comb_3|clkgen:c2|clkcount[3]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.023             ;
-; exp09:comb_3|clkgen:c2|clkcount[23]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.022             ;
-; exp09:comb_3|clkgen:c2|clkcount[16]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.020             ;
-; exp09:comb_3|clkgen:c2|clkcount[6]          ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.019             ;
-; exp09:comb_3|clkgen:c2|clkcount[26]         ; exp09:comb_3|clkgen:c2|clkcount[4]                                                                               ; 0.018             ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 82 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                      ;
++---------------------------------------------+--------------------------------------------------+-------------------+
+; Source Register                             ; Destination Register                             ; Delay Added in ns ;
++---------------------------------------------+--------------------------------------------------+-------------------+
+; exp08:comb_4|count_clk[4]                   ; exp08:comb_4|clk_ls                              ; 1.856             ;
+; exp08:comb_4|count_clk[5]                   ; exp08:comb_4|clk_ls                              ; 1.787             ;
+; exp08:comb_4|count_clk[3]                   ; exp08:comb_4|clk_ls                              ; 1.787             ;
+; exp08:comb_4|count_clk[6]                   ; exp08:comb_4|clk_ls                              ; 1.761             ;
+; exp08:comb_4|count_clk[2]                   ; exp08:comb_4|clk_ls                              ; 1.444             ;
+; exp08:comb_4|count_clk[1]                   ; exp08:comb_4|clk_ls                              ; 1.444             ;
+; exp08:comb_4|count_clk[0]                   ; exp08:comb_4|clk_ls                              ; 1.444             ;
+; exp08:comb_4|clk_ls                         ; exp08:comb_4|clk_ls                              ; 1.444             ;
+; exp08:comb_4|ps2_keyboard:p|r_ptr[0]        ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.520             ;
+; exp08:comb_4|ps2_keyboard:p|r_ptr[1]        ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.497             ;
+; exp09:comb_3|clkgen:c|clkcount[19]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.479             ;
+; exp09:comb_3|clkgen:c|clkcount[21]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.471             ;
+; exp09:comb_3|clkgen:c|clkcount[7]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.469             ;
+; exp09:comb_3|clkgen:c|clkcount[18]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.465             ;
+; exp09:comb_3|clkgen:c|clkcount[15]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.461             ;
+; exp09:comb_3|clkgen:c|clkcount[9]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.458             ;
+; exp09:comb_3|clkgen:c|clkcount[20]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.457             ;
+; exp09:comb_3|clkgen:c|clkcount[23]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.457             ;
+; exp09:comb_3|clkgen:c|clkcount[1]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.451             ;
+; exp09:comb_3|clkgen:c|clkcount[12]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.445             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[3]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.442             ;
+; exp09:comb_3|clkgen:c|clkcount[8]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.439             ;
+; exp09:comb_3|clkgen:c|clkcount[5]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.438             ;
+; exp09:comb_3|clkgen:c|clkcount[13]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.435             ;
+; exp09:comb_3|clkgen:c|clkcount[16]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.431             ;
+; exp09:comb_3|clkgen:c|clkcount[3]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.428             ;
+; exp09:comb_3|clkgen:c|clkcount[6]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.424             ;
+; exp09:comb_3|clkgen:c|clkcount[27]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.407             ;
+; exp09:comb_3|clkgen:c|clkcount[29]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.404             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[1]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.400             ;
+; exp09:comb_3|clkgen:c|clkcount[0]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.395             ;
+; exp09:comb_3|clkgen:c|clkcount[25]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.391             ;
+; exp09:comb_3|clkgen:c|clkcount[28]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.385             ;
+; exp09:comb_3|clkgen:c|clkcount[26]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.381             ;
+; exp08:comb_4|ps2_keyboard:p|count[3]        ; exp08:comb_4|ps2_keyboard:p|count[0]             ; 0.370             ;
+; exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[1] ; exp08:comb_4|ps2_keyboard:p|count[2]             ; 0.370             ;
+; exp08:comb_4|ps2_keyboard:p|w_ptr[0]        ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.357             ;
+; exp08:comb_4|ps2_keyboard:p|count[1]        ; exp08:comb_4|ps2_keyboard:p|buffer[4]            ; 0.356             ;
+; exp08:comb_4|ps2_keyboard:p|count[0]        ; exp08:comb_4|ps2_keyboard:p|buffer[8]            ; 0.356             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[9]       ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.353             ;
+; exp08:comb_4|ps2_keyboard:p|ps2_clk_sync[2] ; exp08:comb_4|ps2_keyboard:p|count[2]             ; 0.350             ;
+; exp08:comb_4|ps2_keyboard:p|count[2]        ; exp08:comb_4|ps2_keyboard:p|buffer[8]            ; 0.328             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[5]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.324             ;
+; exp09:comb_3|clkgen:c|clkcount[30]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.317             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[4]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.290             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[8]       ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.283             ;
+; exp09:comb_3|clkgen:c|clkcount[31]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.278             ;
+; exp09:comb_3|clkgen:c|clkcount[14]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[11]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[4]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[2]           ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[24]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[22]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[10]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkcount[17]          ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c|clkout                ; exp09:comb_3|clkgen:c|clkout                     ; 0.267             ;
+; exp09:comb_3|clkgen:c2|clkcount[7]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.251             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[7]       ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.250             ;
+; exp09:comb_3|clkgen:c2|clkcount[15]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.238             ;
+; exp09:comb_3|clkgen:c2|clkcount[1]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.235             ;
+; exp09:comb_3|clkgen:c2|clkcount[18]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.234             ;
+; exp09:comb_3|clkgen:c2|clkcount[9]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.234             ;
+; exp09:comb_3|clkgen:c2|clkcount[19]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.233             ;
+; exp09:comb_3|clkgen:c2|clkcount[8]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.229             ;
+; exp09:comb_3|clkgen:c2|clkcount[5]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.228             ;
+; exp09:comb_3|clkgen:c2|clkcount[12]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.227             ;
+; exp09:comb_3|clkgen:c2|clkcount[21]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.225             ;
+; exp09:comb_3|clkgen:c2|clkcount[13]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.220             ;
+; exp09:comb_3|clkgen:c2|clkcount[3]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.220             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[2]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.218             ;
+; exp09:comb_3|clkgen:c2|clkcount[6]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.217             ;
+; exp09:comb_3|clkgen:c2|clkcount[16]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.217             ;
+; exp09:comb_3|clkgen:c2|clkcount[20]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.216             ;
+; exp08:comb_4|ps2_keyboard:p|w_ptr[2]        ; exp08:comb_4|ps2_keyboard:p|fifo_rtl_0_bypass[5] ; 0.197             ;
+; exp09:comb_3|clkgen:c2|clkcount[0]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.191             ;
+; exp09:comb_3|clkgen:c2|clkcount[23]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.191             ;
+; exp09:comb_3|clkgen:c2|clkcount[27]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.180             ;
+; exp09:comb_3|clkgen:c2|clkcount[29]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.171             ;
+; exp09:comb_3|clkgen:c2|clkcount[28]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.162             ;
+; exp09:comb_3|clkgen:c2|clkcount[25]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.158             ;
+; exp09:comb_3|clkgen:c2|clkcount[26]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.150             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[6]       ; exp08:comb_4|ps2_keyboard:p|w_ptr[1]             ; 0.070             ;
+; exp09:comb_3|clkgen:c2|clkcount[17]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.063             ;
+; exp09:comb_3|clkgen:c2|clkcount[2]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.027             ;
+; exp08:comb_4|ps2_keyboard:p|r_ptr[2]        ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; PS2_DAT                                     ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; exp08:comb_4|ps2_keyboard:p|buffer[0]       ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; exp08:comb_4|ps2_keyboard:p|w_ptr[1]        ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; exp08:comb_4|nextdata                       ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; exp08:comb_4|ps2_keyboard:p|ready           ; exp08:comb_4|ps2_keyboard:p|ready                ; 0.023             ;
+; exp09:comb_3|clkgen:c2|clkcount[4]          ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[31]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[30]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[11]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[10]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[14]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[22]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkcount[24]         ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
+; exp09:comb_3|clkgen:c2|clkout               ; exp09:comb_3|clkgen:c2|clkout                    ; 0.011             ;
++---------------------------------------------+--------------------------------------------------+-------------------+
+Note: This table only shows the top 99 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2520,7 +2524,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 126 fanout uses global clock CLKCTRL_G6
+    Info (11162): CLOCK_50~inputCLKENA0 with 119 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (332104): Reading SDC File: 'DC_final.SDC'
@@ -2541,10 +2545,8 @@ Warning (332049): Ignored set_output_delay at DC_final.sdc(18): Argument <target
     Info (332050): set_output_delay -clock altera_reserved_tck 3 [get_ports altera_reserved_tdo] File: E:/14A/digital circuit/DC_final/DC_final.sdc Line: 18
 Warning (332049): Ignored set_output_delay at DC_final.sdc(18): Argument -clock is not an object ID File: E:/14A/digital circuit/DC_final/DC_final.sdc Line: 18
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Warning (332060): Node: exp09:comb_3|clkgen:c2|clkout was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register exp09:comb_3|index[0] is being clocked by exp09:comb_3|clkgen:c2|clkout
 Warning (332060): Node: exp08:comb_4|clk_ls was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register exp08:comb_4|code_reg[7] is being clocked by exp08:comb_4|clk_ls
+    Info (13166): Register exp08:comb_4|code_reg[0] is being clocked by exp08:comb_4|clk_ls
 Warning (332060): Node: exp09:comb_3|clkgen:c|clkout was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register exp09:comb_3|vga_ctrl:v|y_cnt[9] is being clocked by exp09:comb_3|clkgen:c|clkout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
@@ -2558,26 +2560,26 @@ Info (332111): Found 4 clocks
     Info (332111):   20.000     CLOCK_50
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:30
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:17
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.99 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 1.16 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:12
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
 Warning (169064): Following 24 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
     Info (169065): Pin DRAM_DQ[1] has a permanently disabled output enable File: E:/14A/digital circuit/DC_final/DC_final.v Line: 38
@@ -2604,11 +2606,11 @@ Warning (169064): Following 24 pins have no output enable or a GND or VCC output
     Info (169065): Pin PS2_CLK has a permanently disabled output enable File: E:/14A/digital circuit/DC_final/DC_final.v Line: 70
     Info (169065): Pin PS2_DAT has a permanently disabled output enable File: E:/14A/digital circuit/DC_final/DC_final.v Line: 72
 Info (144001): Generated suppressed messages file E:/14A/digital circuit/DC_final/DC_final.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 6729 megabytes
-    Info: Processing ended: Sun Dec 02 22:45:44 2018
-    Info: Elapsed time: 00:01:37
-    Info: Total CPU time (on all processors): 00:02:59
+Info: Quartus Prime Fitter was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 6739 megabytes
+    Info: Processing ended: Mon Dec 03 12:44:22 2018
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:39
 
 
 +----------------------------+

@@ -1,6 +1,6 @@
-module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,ascii,index);
+module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index);
 	input clk;
-	input [7:0] ascii;
+	reg [7:0] ascii;
 	output clk_ls,hsync,vsync,vga_sync_n,valid;
 	output [7:0] vga_r,vga_g,vga_b;
 	
@@ -12,6 +12,8 @@ module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,ascii,ind
 	reg [23:0] data = 0;
 	reg [11:0] block_addr = 0;
 	reg [11:0] addr;
+	
+	reg [1:0] status = 0;
 	//reg wren = 0;
 	wire [9:0] h_addr,v_addr;
 	wire [7:0] vga_ret;
@@ -22,7 +24,7 @@ module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,ascii,ind
 	vga_ctrl v(.pclk(clk_ls),.reset(1'b0),.vga_data(data),.h_addr(h_addr),.v_addr(v_addr),.hsync(hsync),.vsync(vsync),.valid(valid),.vga_r(vga_r),.vga_g(vga_g),.vga_b(vga_b));
 	//ram_vga my_ram_vga(.address(block_addr),.clock(clk_ls),.data(ascii),.wren(wren),.q(vga_ret));
 	//ram2_vga my_ram2_vga(block_addr,index,clk_ls,1'b0,ascii,1'b0,1'b1,vga_ret,waste);
-	ram3 my_ram3(block_addr,pos,clk_ls,clk_10,1'b0,8'h61,1'b0,1'b1,vga_ret,waste);
+	ram3 my_ram3(block_addr,pos,clk_ls,clk_ls,1'b0,ascii,1'b0,1'b1,vga_ret,waste);
 	rom_font my_rom_font(.address(addr),.clock(clk_ls),.q(font_ret));
 
 	//light(addr,HEX2,HEX1,HEX0,1'b1);
@@ -48,21 +50,49 @@ module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,ascii,ind
 			/*
 			if(ascii == 8'h5a) index 
 			*/
-		//end
+		//end	
 	end
 	
-	always @ (posedge clk_10)
+	always @ (posedge clk_ls)
 	begin
-		if(ascii != 0) 
+		if(clk_10)
 		begin
-			if(ascii == 8'h0d) index <= index + 70 - (index % 70);  //130 : 130 + 70 - (130 % 70) 
-			else if (ascii == 8'h08) index <= index - 1;
-			else index <= index + 1;
+		case(status)
+		2'd0:
+			begin
+				status <= 2'd1;
+				ascii <= 8'h0;
+				
+			end
+		2'd1:
+			begin
+				status <= 2'd2;
+				ascii <= 8'h61;
+				pos <= pos + 70;
+			end	
+		2'd2:
+			begin
+			end
+		endcase
 		end
-		if(index == 2099) index <= 0;
 		
-		pos <= pos + 70;
+		else status <= 2'd0;
 	end
+	
+	/*always @ (clk_10)
+	begin
+		if(status == 2'd0)
+		begin
+			status <= 2'd1;
+			ascii <= 8'h0;
+		end
+		else if(status == 2'd1)
+		begin
+			status <= 2;
+			ascii <= 8'h61;
+			pos <= pos + 70;
+		end
+	end*/
 endmodule
 
 
