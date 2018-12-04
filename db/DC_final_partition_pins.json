@@ -238,6 +238,10 @@
 				{
 					"name" : "CLOCK_50",
 					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
 				}
 			]
 		}

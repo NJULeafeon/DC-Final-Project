@@ -1,5 +1,6 @@
-module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index, state, kbd_ascii, output_ascii,kbd_input);
+module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index, state, kbd_ascii, output_ascii,kbd_input,mode);
 input [1:0] state;
+input mode;
 input [7:0] kbd_ascii;
 output reg kbd_input = 0;
 reg [7:0] input_ascii;
@@ -24,6 +25,7 @@ reg [11:0] block_addr = 0;
 reg [11:0] addr;
 
 reg [1:0] status = 0;
+reg [3:0] score_status = 0; 
 //reg wren = 0;
 wire [9:0] h_addr,v_addr;
 wire [7:0] vga_ret;
@@ -48,11 +50,20 @@ vga_ctrl v(.pclk(clk_ls),.reset(1'b0),.vga_data(data),.h_addr(h_addr),.v_addr(v_
 //ram2_vga my_ram2_vga(block_addr,index,clk_ls,1'b0,ascii,1'b0,1'b1,vga_ret,waste);
 ram3 my_ram3(block_addr,position,clk_ls,clk_ls,1'b0,ascii,1'b0,1'b1,vga_ret,waste);
 rom_font my_rom_font(.address(addr),.clock(clk_ls),.q(font_ret));
+
+//----------rom for screen redraw-------------
+wire [7:0] menu_value;
+menu rom_menu(menu_screen,clk_ls,menu_value);
+//--------------------------------------------
+
 LFSR rand_gen(1, clk, rand1);
 LFSR rand_gen2(1, clk_rand2, rand2);
 LFSR rand_gen3(1, clk_rand3, rand3);
 
-//light(addr,HEX2,HEX1,HEX0,1'b1);
+
+reg [10:0] score; //rightabove corner:score
+reg [11:0] init_screen; //clear the screen
+reg [11:0] menu_screen; //redraw the logo
 
 initial begin
     /*pos[0] = 8'd20;
@@ -71,6 +82,9 @@ initial begin
     rev[1] = 0;
     rev[2] = 0;
     rev[3] = 0;
+	 init_screen = 0;
+	 menu_screen = 0;
+	 score = 0;
 end
 
 
@@ -93,62 +107,119 @@ begin
 	 end
     if(clk_10)
     begin
-        if ( counter <= 4 && valid_fall[counter]) begin
-            case(status)
-                2'd0:
-                begin
-                    status <= 2'd1;
-                    ascii <= 8'h0;
-                    position <= pos[counter];
-                end
-                2'd1:
-                begin
-                    if ( rev[counter] ) status <= 2'd3;
-                    else status <= 2'd2;
-                end	
-                2'd2:
-                begin
-                    if ( pos[counter] + 70 <= 2100 ) begin
-						pos[counter] = pos[counter] + 70;
-                        ascii <= falling_ascii[counter];
-                    end
-                    else begin
-                        valid_fall[counter] <= 0;
-                        ascii <= 0;
-								rev[counter] <= 0;
-                    end
-                    position <= pos[counter];
-                    status <= 2'd0;
-                    counter <= counter + 1;
-                end
-                2'd3:
-                begin
-                    if ( pos[counter] >= 70 ) begin
-                        pos[counter] = pos[counter] - 70;
-                        ascii <= falling_ascii[counter];
-                    end
-                    else begin
-                        valid_fall[counter] <= 0;
-                        ascii <= 0;
-								rev[counter] <= 0;
-                    end
-                    position <= pos[counter];
-                    status <= 2'd0;
-                    counter <= counter + 1;
-                end
-            endcase
-        end else if ( counter <= 4 ) begin
-            if ( rand_next == 8'd11 ) begin
-                valid_fall[counter] <= 1;
-                pos[counter] <= rand_pos;
-                falling_ascii[counter] <= rand_ascii;
-                counter <= counter + 1;
-            end
-        end
+	 
+		  if(mode) begin //game mode
+			  
+				menu_screen <= 0;
+			  //---------------------screen erase----------------------
+				if (init_screen != 2100) begin
+					position <= init_screen;
+					ascii <= 0;
+					init_screen <= init_screen + 1;
+				end
+			  
+			  //-------------------------------------------------------
+	 
+	 
+	 
+		
+			  //---------------------char fall-------------------------
+			   else if ( counter <= 4 && valid_fall[counter]) begin
+					case(status)
+						 2'd0:
+						 begin
+							  status <= 2'd1;
+							  ascii <= 8'h0;
+							  position <= pos[counter];
+						 end
+						 2'd1:
+						 begin
+							  if ( rev[counter] ) status <= 2'd3;
+							  else status <= 2'd2;
+						 end	
+						 2'd2:
+						 begin
+							  if ( pos[counter] + 70 <= 2100 ) begin
+							pos[counter] = pos[counter] + 70;
+									ascii <= falling_ascii[counter];
+							  end
+							  else begin
+									valid_fall[counter] <= 0;
+									ascii <= 0;
+									rev[counter] <= 0;
+							  end
+							  position <= pos[counter];
+							  status <= 2'd0;
+							  counter <= counter + 1;
+						 end
+						 2'd3:
+						 begin
+							  if ( pos[counter] >= 70 ) begin
+									pos[counter] = pos[counter] - 70;
+									ascii <= falling_ascii[counter];
+							  end
+							  else begin
+									valid_fall[counter] <= 0;
+									ascii <= 0;
+									rev[counter] <= 0;
+							  end
+							  position <= pos[counter];
+							  status <= 2'd0;
+							  counter <= counter + 1;
+						 end
+					endcase
+			  end else if ( counter <= 4 ) begin
+					if ( rand_next == 8'd11 ) begin
+						 valid_fall[counter] <= 1;
+						 pos[counter] <= rand_pos;
+						 falling_ascii[counter] <= rand_ascii;
+						 counter <= counter + 1;
+					end
+			  end
+			  //------------------end of char fall---------------
+			  
+			  
+			  //----------score handler-----------
+			  else if (score_status != 9) begin
+					position <= 61 + score_status;
+					case(score_status)
+						4'd0:ascii <= 83;
+						4'd1:ascii <= 67;
+						4'd2:ascii <= 79;
+						4'd3:ascii <= 82;
+						4'd4:ascii <= 69;
+						4'd5:ascii <= 58;
+						4'd6:ascii <= (score / 100) % 10 + 48;
+						4'd7:ascii <= (score / 10) % 10 + 48;
+						4'd8:ascii <= score % 10 + 48;
+					endcase
+					score_status <= score_status + 1;
+				end
+				//------end of score handler----------
+				
+				
+		  end //end of if(mode) begin
+		  
+		  if(!mode) //menu screen mode
+		  begin
+		     init_screen <= 0;
+			  
+			  //---------------------menu_screen redraw---------------
+				if (menu_screen != 2100) begin
+					position <= menu_screen;
+					ascii <= menu_value;
+					menu_screen <= menu_screen + 1;
+				end
+			  
+			  //-------------------------------------------------------
+			  
+		  end
     end
     else begin
+		  score_status <= 2'd0;
         if ( kbd_input ) begin
             if ( counter <= 4 && falling_ascii[counter] == input_ascii && valid_fall[counter] && rev[counter] == 0) begin
+					 score <= score + 1; 
                 lowest_pos <= pos[counter];
                 triggered <= counter;
                 counter <= counter + 1;
