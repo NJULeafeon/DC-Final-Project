@@ -1,6 +1,8 @@
-module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg, ready_out);
+module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg, ready_out, state);
+	parameter pressed = 2'b01, released = 2'b00, breakcode = 2'b10;
 	input clk,clrn,ps2_clk,ps2_data;
 	output [7:0] ascii;
+	output reg [1:0] state;
 	reg true = 1;
 	reg [7:0] data_count = 0;
 	reg nextdata = 0;
@@ -47,6 +49,7 @@ module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg, ready_out);
 			begin
 				data_count <= data_count + 1;
 				flag <= 1;  //因为f0输出后还会增加一个通码，这会导致light_enable恢复到1
+				state <= breakcode;
 			end
 			else
 			begin
@@ -56,10 +59,12 @@ module exp08(clk,clrn,ps2_clk,ps2_data,ascii,code_reg, ready_out);
 					flag <= 0;
 					code_reg <= 0;//清零用
 					if(code == 8'h58) CapsLock = ~CapsLock;
+					state <= released;
 				end
 				else
 				begin
 					light_enable <= 1;
+					state <= pressed;
 				end	
 			end
 			
