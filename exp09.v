@@ -15,10 +15,10 @@ assign vga_sync_n = 0;
 output reg [11:0] index = 420;
 
 reg [11:0] position;
-reg [11:0] pos [3:0];
-reg [7:0] falling_ascii [3:0];
-reg [3:0] valid_fall;
-reg [3:0] rev;
+reg [11:0] pos [4:0];
+reg [7:0] falling_ascii [4:0];
+reg [4:0] valid_fall;
+reg [4:0] rev;
 
 reg [23:0] data = 0;
 reg [11:0] block_addr = 0;
@@ -76,8 +76,10 @@ initial begin
     falling_ascii[1] = 8'h0;
 	 falling_ascii[2] = 8'h0;
     falling_ascii[3] = 8'h0;
+	 falling_ascii[4] = 8'h0;
     valid_fall[2] = 0;
     valid_fall[3] = 0;
+	 valid_fall[4] = 0;
     rev[0] = 0;
     rev[1] = 0;
     rev[2] = 0;
@@ -98,13 +100,17 @@ end
 
 reg [4:0] counter = 0;
 reg [4:0] triggered = 5;
+reg [32:0] kbd_counter = 0;
 always @ (posedge clk_ls)
 begin
-	 if (state == 2'b01) begin
-		kbd_input <= 1;
-		input_ascii <= kbd_ascii;
-		output_ascii <= kbd_ascii;
-	 end
+    if ( kbd_counter >= 2000000 ) begin
+        if (state == 2'b01) begin
+            kbd_input <= 1;
+            input_ascii <= kbd_ascii;
+            output_ascii <= kbd_ascii;
+        end
+        kbd_counter <= 0;
+    end else kbd_counter <= kbd_counter + 1;
     if(clk_10)
     begin
 	 
@@ -219,11 +225,11 @@ begin
 		  score_status <= 2'd0;
         if ( kbd_input ) begin
             if ( counter <= 4 && falling_ascii[counter] == input_ascii && valid_fall[counter] && rev[counter] == 0) begin
-					 score <= score + 1; 
                 lowest_pos <= pos[counter];
                 triggered <= counter;
                 counter <= counter + 1;
             end else if (counter > 4 ) begin
+                if ( triggered <= 4 ) score <= score + 1;
                 rev[triggered] <= 1;
                 triggered <= 5;
                 kbd_input <= 0;

@@ -107,9 +107,11 @@ wire ready;
 wire kbd_input;
 wire [1:0] state;
 exp09 vga(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,index, state, ascii, output_ascii,KEY[0],mode);
-mykbd my_keyboard(CLOCK_50,PS2_CLK,PS2_DAT,state,ascii,ready);
-//exp08 kbd(CLOCK_50, 1'b1, PS2_CLK,PS2_DAT,ascii,code_reg, ready);
+//mykbd my_keyboard(CLOCK_50,PS2_CLK,PS2_DAT,state,ascii,ready);
+exp08 kbd(CLOCK_50, 1'b1, PS2_CLK,PS2_DAT,ascii,code_reg, ready, state);
 light l(.data(output_ascii),.out_h(HEX1),.out_l(HEX0),.enable(1'b1));
 light l2(.data(ascii),.out_h(HEX3),.out_l(HEX2),.enable(1'b1));
+assign LEDR[0] = state[0];
+assign LEDR[1] = state[1];
 
 endmodule
