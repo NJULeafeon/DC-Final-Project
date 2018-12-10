@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index, state, kbd_ascii, output_ascii,kbd_input,mode,sound);
-=======
 module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b, state, kbd_ascii, output_ascii,kbd_input,mode,sound,difficulty);
 >>>>>>> leafeon
 input [1:0] state;
@@ -36,12 +33,9 @@ reg [1:0] status = 0;
 reg [3:0] score_status = 0; 
 reg [3:0] miss_status = 0;
 reg [3:0] hit_status = 0;
-<<<<<<< HEAD
-=======
 reg [2:0] difficulty_status = 0;
 reg [2:0] game_over_status = 0;
 reg [3:0] time_status = 0;
->>>>>>> leafeon
 
 //reg wren = 0;
 wire [9:0] h_addr,v_addr;
@@ -88,16 +82,11 @@ LFSR rand_gen3(1, clk_rand3, rand3);
 reg [10:0] score; //rightabove corner:score
 reg [11:0] init_screen; //clear the screen
 reg [11:0] menu_screen; //redraw the logo
-<<<<<<< HEAD
-reg [10:0] miss;
-reg [10:0] hit;
-=======
 reg [11:0] game_over_screen; //draw game_over_screen
 reg [6:0] timee; //time left
 reg [10:0] miss;
 reg [10:0] hit;
 reg prev_difficulty;//difficulty at previous clock period. If difficulty changes, reset init_screen to 0 to clear the screen.
->>>>>>> leafeon
 
 initial begin
     /*pos[0] = 8'd20;
@@ -122,16 +111,10 @@ initial begin
 	 menu_screen = 0;
 	 game_over_screen = 0;
 	 score = 0;
-<<<<<<< HEAD
-	 sound = 0;
-	 miss = 0;
-	 hit = 0;
-=======
 	 miss = 0;
 	 hit = 0;
 	 timee = 20;
 	 prev_difficulty = difficulty;
->>>>>>> leafeon
 end
 
 always @ (posedge clk_1)
@@ -151,17 +134,11 @@ always @ (posedge clk_ls)
 begin
     block_addr <= (v_addr / 16) * 70 + ((h_addr-4) / 9);
     addr <= (vga_ret << 4) + (v_addr % 16);
-<<<<<<< HEAD
-    if(font_ret[h_addr%9] == 1'b1) 
-	 begin
-		if(block_addr >= 61 && block_addr <= 70)data <= 24'h00ff00;
-=======
     if(font_ret[h_addr%9] == 1'b1)
 	 begin
 		if(block_addr >= 61 && block_addr <= 70)data <= 24'h00ff00;
 		else if(block_addr >= 133 && block_addr <= 140 && timee <= 5) data <= 24'hff0000;
 		else if((block_addr >= 2023 && block_addr <= 2030) || (block_addr >= 2092 && block_addr <= 2100)) data <= 24'h0000ff;
->>>>>>> leafeon
 		else data <= 24'hffffff;
 	 end
     else data <= 24'h000000;
@@ -195,74 +172,6 @@ begin
 	 
 		  if(mode) begin //game mode
 			  
-<<<<<<< HEAD
-				menu_screen <= 0;
-				sound <= 0;
-			  //---------------------screen erase----------------------
-				if (init_screen != 2100) begin
-					position <= init_screen;
-					ascii <= 0;
-					init_screen <= init_screen + 1;
-				end
-			  
-			  //-------------------------------------------------------
-	 
-	 
-	 
-		
-			  //---------------------char fall-------------------------
-			   else if ( counter <= 4 && valid_fall[counter]) begin
-					case(status)
-						 2'd0:
-						 begin
-							  status <= 2'd1;
-							  ascii <= 8'h0;
-							  position <= pos[counter];
-						 end
-						 2'd1:
-						 begin
-							  if ( rev[counter] ) status <= 2'd3;
-							  else status <= 2'd2;
-						 end	
-						 2'd2:
-						 begin
-							  if ( pos[counter] + 70 <= 2100 ) begin
-							pos[counter] = pos[counter] + 70;
-									ascii <= falling_ascii[counter];
-							  end
-							  else begin
-									miss <= miss + 1;
-									valid_fall[counter] <= 0;
-									ascii <= 0;
-									rev[counter] <= 0;
-							  end
-							  position <= pos[counter];
-							  status <= 2'd0;
-							  counter <= counter + 1;
-						 end
-						 2'd3:
-						 begin
-							  if ( pos[counter] >= 70 ) begin
-									pos[counter] = pos[counter] - 70;
-									ascii <= falling_ascii[counter];
-							  end
-							  else begin
-									valid_fall[counter] <= 0;
-									ascii <= 0;
-									rev[counter] <= 0;
-							  end
-							  position <= pos[counter];
-							  status <= 2'd0;
-							  counter <= counter + 1;
-						 end
-					endcase
-			  end else if ( counter <= 4 ) begin
-					if ( rand_next == 8'd11 ) begin
-						 valid_fall[counter] <= 1;
-						 pos[counter] <= rand_pos;
-						 falling_ascii[counter] <= rand_ascii;
-						 counter <= counter + 1;
-=======
 			   if(game_over_status == 0) begin
 					if(timee == 20) score <= 0;
 					menu_screen <= 0;
@@ -278,7 +187,6 @@ begin
 						position <= init_screen;
 						ascii <= 0;
 						init_screen <= init_screen + 1;
->>>>>>> leafeon
 					end
 				  
 				  //-------------------------------------------------------
@@ -434,44 +342,7 @@ begin
 					
 					//---------end of time display--------
 				
-<<<<<<< HEAD
-				//----------hit count----------------
-				else if (hit_status != 7) begin
-					position <= 2023 + hit_status;
-					case(hit_status)
-						4'd0:ascii <= 72;
-						4'd1:ascii <= 73;
-						4'd2:ascii <= 84;
-						4'd3:ascii <= 58;
-						4'd4:ascii <= (hit / 100) % 10 + 48;
-						4'd5:ascii <= (hit / 10) % 10 + 48;
-						4'd6:ascii <= hit % 10 + 48;
-					endcase
-					hit_status <= hit_status + 1;
 				end
-				//----------end of hit count----------
-				
-				//---------miss count ---------------
-				else if (miss_status != 8) begin
-					position <= 2092 + miss_status;
-					case(miss_status)
-						4'd0:ascii <= 77;
-						4'd1:ascii <= 73;
-						4'd2:ascii <= 83;
-						4'd3:ascii <= 83;
-						4'd4:ascii <= 58;
-						4'd5:ascii <= (miss / 100) % 10 + 48;
-						4'd6:ascii <= (miss / 10) % 10 + 48;
-						4'd7:ascii <= miss % 10 + 48;
-					endcase
-					miss_status <= miss_status + 1;
-				end
-				//----------end of miss count----------
-				
-				
-=======
-				end
->>>>>>> leafeon
 				
 				else //game_over_status > 0
 				begin
@@ -509,28 +380,18 @@ begin
 		  score_status <= 0;
 		  miss_status <= 0;
 		  hit_status <= 0;
-<<<<<<< HEAD
-=======
 		  time_status <= 0;
 		  difficulty_status <= 0;
->>>>>>> leafeon
         if ( kbd_input ) begin
             if ( counter <= ascii_num - 1 && falling_ascii[counter] == input_ascii && valid_fall[counter] && rev[counter] == 0 &&
 				     pos[counter] >= lowest_pos) begin
                 lowest_pos <= pos[counter];
                 triggered <= counter;
                 counter <= counter + 1;
-<<<<<<< HEAD
-            end else if (counter > 4 ) begin
-                if ( triggered <= 4 ) 
-					 begin
-						score <= score + 1;
-=======
             end else if (counter > ascii_num - 1 ) begin
                 if ( triggered <= ascii_num - 1 ) 
 					 begin
 					 score <= score + 1;
->>>>>>> leafeon
 						hit <= hit + 1;
 						sound <= 1070;
 					 end
