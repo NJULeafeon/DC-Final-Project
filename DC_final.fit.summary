@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-Fitter Status : Successful - Thu Dec 06 13:48:55 2018
-=======
-Fitter Status : Successful - Mon Dec 10 11:30:51 2018
->>>>>>> leafeon
+Fitter Status : Successful - Mon Dec 10 13:33:02 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : DC_final
 Top-level Entity Name : DC_final
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-<<<<<<< HEAD
-Logic utilization (in ALMs) : 1,198 / 41,910 ( 3 % )
-Total registers : 642
+Logic utilization (in ALMs) : 2,588 / 41,910 ( 6 % )
+Total registers : 1154
 Total pins : 168 / 499 ( 34 % )
 Total virtual pins : 0
-Total block memory bits : 89,000 / 5,662,720 ( 2 % )
-Total RAM Blocks : 18 / 553 ( 3 % )
-=======
-Logic utilization (in ALMs) : 2,678 / 41,910 ( 6 % )
-Total registers : 1111
-Total pins : 168 / 499 ( 34 % )
-Total virtual pins : 0
-Total block memory bits : 106,016 / 5,662,720 ( 2 % )
-Total RAM Blocks : 22 / 553 ( 4 % )
->>>>>>> leafeon
+Total block memory bits : 106,400 / 5,662,720 ( 2 % )
+Total RAM Blocks : 23 / 553 ( 4 % )
 Total DSP Blocks : 1 / 112 ( < 1 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )

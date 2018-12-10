@@ -106,15 +106,6 @@ wire [15:0] audiodata;
 wire [15:0] freq;
 wire [15:0] sound;
 
-wire clk_i2c;
-wire reset;
-wire [15:0] audiodata;
-wire [15:0] freq;
-//wire [4:0] volumn;
-reg [4:0] volumn = 10;
-wire [8:0] test;
-wire [15:0] sound;
-
 //=======================================================
 //  Structural coding
 //=======================================================

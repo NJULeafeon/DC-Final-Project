@@ -171,7 +171,7 @@ IRDA_TXD << <GND>
 
 
 |DC_final|exp09:vga
-clk => clk.IN6
+clk => clk.IN7
 clk_ls <= clk_ls.DB_MAX_OUTPUT_PORT_TYPE
 hsync <= vga_ctrl:v.hsync
 vsync <= vga_ctrl:v.vsync
@@ -251,8 +251,6 @@ mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
-<<<<<<< HEAD
-=======
 mode => game_over_screen.OUTPUTSELECT
 mode => game_over_screen.OUTPUTSELECT
 mode => game_over_screen.OUTPUTSELECT
@@ -265,7 +263,6 @@ mode => game_over_screen.OUTPUTSELECT
 mode => game_over_screen.OUTPUTSELECT
 mode => game_over_screen.OUTPUTSELECT
 mode => game_over_screen.OUTPUTSELECT
->>>>>>> leafeon
 mode => sound.OUTPUTSELECT
 mode => sound.OUTPUTSELECT
 mode => sound.OUTPUTSELECT
@@ -282,8 +279,6 @@ mode => sound.OUTPUTSELECT
 mode => sound.OUTPUTSELECT
 mode => sound.OUTPUTSELECT
 mode => sound.OUTPUTSELECT
-<<<<<<< HEAD
-=======
 mode => init_screen.OUTPUTSELECT
 mode => init_screen.OUTPUTSELECT
 mode => init_screen.OUTPUTSELECT
@@ -303,7 +298,6 @@ mode => ascii_num.OUTPUTSELECT
 mode => ascii_num.OUTPUTSELECT
 mode => ascii_num.OUTPUTSELECT
 mode => ascii_num.OUTPUTSELECT
->>>>>>> leafeon
 mode => position.OUTPUTSELECT
 mode => position.OUTPUTSELECT
 mode => position.OUTPUTSELECT
@@ -328,6 +322,8 @@ mode => status.OUTPUTSELECT
 mode => status.OUTPUTSELECT
 mode => status.OUTPUTSELECT
 mode => status.OUTPUTSELECT
+mode => speed_counter.OUTPUTSELECT
+mode => speed.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
@@ -712,20 +708,6 @@ mode => pos.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
 mode => pos.OUTPUTSELECT
-mode => falling_ascii.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-mode => miss.OUTPUTSELECT
-<<<<<<< HEAD
-=======
 mode => valid_fall.OUTPUTSELECT
 mode => valid_fall.OUTPUTSELECT
 mode => valid_fall.OUTPUTSELECT
@@ -791,6 +773,17 @@ mode => rev.OUTPUTSELECT
 mode => rev.OUTPUTSELECT
 mode => rev.OUTPUTSELECT
 mode => rev.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
+mode => miss.OUTPUTSELECT
 mode => counter.OUTPUTSELECT
 mode => counter.OUTPUTSELECT
 mode => counter.OUTPUTSELECT
@@ -808,8 +801,6 @@ mode => miss_status.OUTPUTSELECT
 mode => miss_status.OUTPUTSELECT
 mode => miss_status.OUTPUTSELECT
 mode => miss_status.OUTPUTSELECT
-<<<<<<< HEAD
-=======
 mode => difficulty_status.OUTPUTSELECT
 mode => difficulty_status.OUTPUTSELECT
 mode => difficulty_status.OUTPUTSELECT
@@ -828,7 +819,6 @@ mode => hit.OUTPUTSELECT
 mode => hit.OUTPUTSELECT
 mode => hit.OUTPUTSELECT
 mode => hit.OUTPUTSELECT
->>>>>>> leafeon
 mode => init_screen.OUTPUTSELECT
 mode => init_screen.OUTPUTSELECT
 mode => init_screen.OUTPUTSELECT
@@ -873,8 +863,6 @@ mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
 mode => menu_screen.OUTPUTSELECT
-<<<<<<< HEAD
-=======
 mode => game_over_status[0].ENA
 mode => game_over_status[1].ENA
 mode => game_over_status[2].ENA
@@ -885,7 +873,6 @@ mode => timee[3].ENA
 mode => timee[4].ENA
 mode => timee[5].ENA
 mode => timee[6].ENA
->>>>>>> leafeon
 sound[0] <= sound[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sound[1] <= sound[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sound[2] <= sound[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -902,8 +889,6 @@ sound[12] <= sound[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sound[13] <= sound[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sound[14] <= sound[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sound[15] <= sound[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-<<<<<<< HEAD
-=======
 difficulty => always2.IN1
 difficulty => ascii.OUTPUTSELECT
 difficulty => ascii.OUTPUTSELECT
@@ -914,10 +899,112 @@ difficulty => ascii_num.DATAB
 difficulty => ascii_num.DATAB
 difficulty => ascii_num.DATAB
 difficulty => ascii_num.DATAB
->>>>>>> leafeon
 
 
 |DC_final|exp09:vga|clkgen:c
+clkin => clkout~reg0.CLK
+clkin => clkcount[0].CLK
+clkin => clkcount[1].CLK
+clkin => clkcount[2].CLK
+clkin => clkcount[3].CLK
+clkin => clkcount[4].CLK
+clkin => clkcount[5].CLK
+clkin => clkcount[6].CLK
+clkin => clkcount[7].CLK
+clkin => clkcount[8].CLK
+clkin => clkcount[9].CLK
+clkin => clkcount[10].CLK
+clkin => clkcount[11].CLK
+clkin => clkcount[12].CLK
+clkin => clkcount[13].CLK
+clkin => clkcount[14].CLK
+clkin => clkcount[15].CLK
+clkin => clkcount[16].CLK
+clkin => clkcount[17].CLK
+clkin => clkcount[18].CLK
+clkin => clkcount[19].CLK
+clkin => clkcount[20].CLK
+clkin => clkcount[21].CLK
+clkin => clkcount[22].CLK
+clkin => clkcount[23].CLK
+clkin => clkcount[24].CLK
+clkin => clkcount[25].CLK
+clkin => clkcount[26].CLK
+clkin => clkcount[27].CLK
+clkin => clkcount[28].CLK
+clkin => clkcount[29].CLK
+clkin => clkcount[30].CLK
+clkin => clkcount[31].CLK
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkcount.OUTPUTSELECT
+rst => clkout.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkcount.OUTPUTSELECT
+clken => clkout.OUTPUTSELECT
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DC_final|exp09:vga|clkgen:c6
 clkin => clkout~reg0.CLK
 clkin => clkcount[0].CLK
 clkin => clkcount[1].CLK
@@ -3107,48 +3194,6 @@ enable => out_l.OUTPUTSELECT
 enable => out_l.OUTPUTSELECT
 
 
-<<<<<<< HEAD
-|DC_final|light:l3
-data[0] => Decoder1.IN3
-data[1] => Decoder1.IN2
-data[2] => Decoder1.IN1
-data[3] => Decoder1.IN0
-data[4] => Decoder0.IN3
-data[5] => Decoder0.IN2
-data[6] => Decoder0.IN1
-data[7] => Decoder0.IN0
-out_h[0] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[1] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[2] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[3] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[4] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[5] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_h[6] <= out_h.DB_MAX_OUTPUT_PORT_TYPE
-out_l[0] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[1] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[2] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[3] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[4] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[5] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-out_l[6] <= out_l.DB_MAX_OUTPUT_PORT_TYPE
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_h.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-enable => out_l.OUTPUTSELECT
-
-
-=======
->>>>>>> leafeon
 |DC_final|audio_clk:u1
 refclk => refclk.IN1
 rst => rst.IN1
@@ -3446,18 +3491,6 @@ I2C_SDAT <> I2C_Controller:u0.I2C_SDAT
 testbit[0] <= cmd_count[0].DB_MAX_OUTPUT_PORT_TYPE
 testbit[1] <= cmd_count[1].DB_MAX_OUTPUT_PORT_TYPE
 testbit[2] <= cmd_count[2].DB_MAX_OUTPUT_PORT_TYPE
-<<<<<<< HEAD
-volumn[0] => ~NO_FANOUT~
-volumn[1] => ~NO_FANOUT~
-volumn[2] => ~NO_FANOUT~
-volumn[3] => ~NO_FANOUT~
-volumn[4] => ~NO_FANOUT~
-volumn[5] => ~NO_FANOUT~
-volumn[6] => ~NO_FANOUT~
-volumn[7] => ~NO_FANOUT~
-volumn[8] => ~NO_FANOUT~
-=======
->>>>>>> leafeon
 
 
 |DC_final|I2C_Audio_Config:myconfig|I2C_Controller:u0
