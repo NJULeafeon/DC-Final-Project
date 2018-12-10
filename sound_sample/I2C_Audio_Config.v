@@ -3,12 +3,19 @@ module I2C_Audio_Config ( clk_i2c,
 								  I2C_SCLK,
 								  I2C_SDAT,
 								  testbit,
+<<<<<<< HEAD
 								  volumn);
+=======
+								  );
+>>>>>>> leafeon
    parameter  total_cmd = 9;
 
 	input clk_i2c;  //10k I2C clock
    input reset_n;
+<<<<<<< HEAD
 	input [8:0] volumn;
+=======
+>>>>>>> leafeon
    
    output I2C_SCLK;
 	output [2:0] testbit;

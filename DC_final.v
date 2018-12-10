@@ -95,10 +95,16 @@ module DC_final(
 
 wire [7:0] ascii;
 wire [7:0] code_reg;
-wire [11:0] index;
 wire [7:0] output_ascii;
 wire mode;
 assign mode = SW[0];
+assign difficulty = SW[1];
+
+wire clk_i2c;
+wire reset;
+wire [15:0] audiodata;
+wire [15:0] freq;
+wire [15:0] sound;
 
 wire clk_i2c;
 wire reset;
@@ -115,7 +121,11 @@ wire [15:0] sound;
 wire ready;
 wire kbd_input;
 wire [1:0] state;
+<<<<<<< HEAD
 exp09 vga(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,index, state, ascii, output_ascii,KEY[0],mode,sound);
+=======
+exp09 vga(CLOCK_50,VGA_CLK,VGA_HS,VGA_VS,VGA_SYNC_N,VGA_BLANK_N,VGA_R,VGA_G,VGA_B,state, ascii, output_ascii,KEY[0],mode,sound,difficulty);
+>>>>>>> leafeon
 //mykbd my_keyboard(CLOCK_50,PS2_CLK,PS2_DAT,state,ascii,ready);
 exp08 kbd(CLOCK_50, 1'b1, PS2_CLK,PS2_DAT,ascii,code_reg, ready, state);
 light l(.data(output_ascii),.out_h(HEX1),.out_l(HEX0),.enable(1'b1));
@@ -124,6 +134,7 @@ light l3(sound[7:0],HEX5,HEX4,1'b1);
 assign LEDR[0] = state[0];
 assign LEDR[1] = state[1];
 
+<<<<<<< HEAD
 assign reset = ~KEY[1];
 audio_clk u1(CLOCK_50, reset,AUD_XCK, LEDR[9]);
 
@@ -132,8 +143,22 @@ clkgen #(10000) my_i2c_clk(CLOCK_50,reset,1'b1,clk_i2c);  //10k I2C clock
 assign test [8:0] = 9'h42+5*volumn;
 
 I2C_Audio_Config myconfig(clk_i2c, KEY[1],FPGA_I2C_SCLK,FPGA_I2C_SDAT,LEDR[8:6],test);
+=======
+//-----------------sound-----------------
+
+assign reset = ~KEY[1];
+audio_clk u1(CLOCK_50, reset,AUD_XCK, LEDR[9]);
+clkgen #(10000) my_i2c_clk(CLOCK_50,reset,1'b1,clk_i2c);  //10k I2C clock  
+
+I2C_Audio_Config myconfig(clk_i2c, KEY[1],FPGA_I2C_SCLK,FPGA_I2C_SDAT,LEDR[8:6]);
+>>>>>>> leafeon
 
 I2S_Audio myaudio(AUD_XCK, KEY[1], AUD_BCLK, AUD_DACDAT, AUD_DACLRCK, audiodata);
 
 Sin_Generator sin_wave(AUD_DACLRCK, KEY[1], sound, audiodata);
+<<<<<<< HEAD
+=======
+//----------------end of sound------------
+
+>>>>>>> leafeon
 endmodule
