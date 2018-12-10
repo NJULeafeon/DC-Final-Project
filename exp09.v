@@ -1,4 +1,6 @@
 module exp09(clk,clk_ls,hsync,vsync,vga_sync_n,valid,vga_r,vga_g,vga_b,index, state, kbd_ascii, output_ascii,kbd_input,mode);
+
+parameter waste_pos = 12'hfff;
 input [1:0] state;
 input mode;
 input [7:0] kbd_ascii;
@@ -20,8 +22,8 @@ reg [7:0] falling_ascii [70:0];
 reg [70:0] valid_fall;
 reg [70:0] rev;
 reg [5:0] ascii_num = 10;
-reg [1:0] speed [70:0];
-reg [1:0] speed_counter [70:0];
+reg [4:0] speed [70:0];
+reg [4:0] speed_counter [70:0];
 
 reg [23:0] data = 0;
 reg [11:0] block_addr = 0;
@@ -43,11 +45,13 @@ wire [7:0] rand3;
 wire [7:0] rand_ascii = rand1 % 8'd26 + 8'h61;
 wire [7:0] rand_pos = rand2 % 8'd71;
 wire [7:0] rand_next = rand3 % 8'd20;    // if rand_next == 10 then generate the next char
-wire [1:0] rand_speed = rand3 % 2'd2;
+wire [4:0] rand_speed = ( rand2 % 2'd3 ) * 2 + 6;
 
 clkgen #25000000 c(clk,1'b0,1'b1,clk_ls);
+clkgen #100 c6(clk,1'b0,1'b1,clk_100);
 clkgen #1290791 c3(clk,1'b0,1'b1,clk_rand2);
 clkgen #892747 c4(clk, 1'b0, 1'b1, clk_rand3);
+clkgen #892731 c5(clk, 1'b0, 1'b1, clk_rand4);
 clkgen #10 c2(clk,1'b0,1'b1,clk_10);
 vga_ctrl v(.pclk(clk_ls),.reset(1'b0),.vga_data(data),.h_addr(h_addr),.v_addr(v_addr),.hsync(hsync),.vsync(vsync),.valid(valid),.vga_r(vga_r),.vga_g(vga_g),.vga_b(vga_b));
 //ram_vga my_ram_vga(.address(block_addr),.clock(clk_ls),.data(ascii),.wren(wren),.q(vga_ret));
@@ -63,6 +67,7 @@ menu rom_menu(menu_screen,clk_ls,menu_value);
 LFSR rand_gen(1, clk, rand1);
 LFSR rand_gen2(1, clk_rand2, rand2);
 LFSR rand_gen3(1, clk_rand3, rand3);
+LFSR rand_gen4(1, clk_rand4, rand4);
 
 
 reg [10:0] score; //rightabove corner:score
@@ -122,7 +127,7 @@ begin
             kbd_counter <= kbd_counter + 1;
         end
     end
-    if(clk_10)
+    if(clk_100)
     begin
 	 
 		  if(mode) begin //game mode
@@ -147,7 +152,11 @@ begin
 						 begin
 							  status <= 2'd1;
                               ascii <= 8'h0;
-                              position <= pos[counter];
+                              if ( speed_counter[counter] < speed[counter] ) begin
+                                  position <= waste_pos;
+                              end else begin
+                                  position <= pos[counter];
+                              end
 						 end
 						 2'd1:
 						 begin
@@ -156,36 +165,46 @@ begin
 						 end	
 						 2'd2:
 						 begin
-							  if ( pos[counter] + 70 <= 2100 ) begin
+                              if ( speed_counter[counter] < speed[counter] ) begin
+                                  position = waste_pos;
+                                  speed_counter[counter] <= speed_counter[counter] + 1;
+                              end else if ( pos[counter] + 70 <= 2100 ) begin
                                   pos[counter] = pos[counter] + 70;
                                   ascii <= falling_ascii[counter];
+                                  position <= pos[counter];
+                                  speed_counter[counter] <= 0;
                               end else begin
 									valid_fall[counter] <= 0;
 									ascii <= 0;
 									rev[counter] <= 0;
+                                    position <= pos[counter];
 							  end
-							  position <= pos[counter];
 							  status <= 2'd0;
 							  counter <= counter + 1;
 						 end
 						 2'd3:
 						 begin
-							  if ( pos[counter] >= 70 ) begin
+                              if ( speed_counter[counter] < speed[counter] ) begin
+                                  position = waste_pos;
+                                  speed_counter[counter] <= speed_counter[counter] + 1;
+                              end else if ( pos[counter] >= 70 ) begin
 									pos[counter] = pos[counter] - 70;
 									ascii <= falling_ascii[counter];
+                                    position <= pos[counter];
+                                    speed_counter[counter] <= 0;
 							  end
 							  else begin
 									valid_fall[counter] <= 0;
 									ascii <= 0;
 									rev[counter] <= 0;
+                                    position <= pos[counter];
 							  end
-							  position <= pos[counter];
 							  status <= 2'd0;
 							  counter <= counter + 1;
 						 end
 					endcase
 			  end else if ( counter <= ascii_num - 1 ) begin
-					if ( rand_next == 8'd11 ) begin
+					if ( rand_next == 8'd11 /* && rand_ascii != falling_ascii[counter - 1] */ ) begin
 						 valid_fall[counter] <= 1;
 						 pos[counter] <= rand_pos;
 						 falling_ascii[counter] <= rand_ascii;
