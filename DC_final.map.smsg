@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at exp09.v(104): always construct contains both blocking and non-blocking assignments File: E:/DigitalCurcuitLab/DC-Final-Project/exp09.v Line: 104
-Warning (10268): Verilog HDL information at exp08.v(41): always construct contains both blocking and non-blocking assignments File: E:/DigitalCurcuitLab/DC-Final-Project/exp08.v Line: 41
+Warning (10268): Verilog HDL information at exp09.v(150): always construct contains both blocking and non-blocking assignments File: E:/14A/digital circuit/DC_final/12.9/exp09.v Line: 150
+Warning (10268): Verilog HDL information at exp08.v(41): always construct contains both blocking and non-blocking assignments File: E:/14A/digital circuit/DC_final/12.9/exp08.v Line: 41

@@ -1,4 +1,11 @@
 
+State Machine - |DC_final|I2C_Audio_Config:myconfig|mi2c_state
+Name mi2c_state.11 mi2c_state.10 mi2c_state.01 mi2c_state.00 
+mi2c_state.00 0 0 0 0 
+mi2c_state.01 0 0 1 1 
+mi2c_state.10 0 1 0 1 
+mi2c_state.11 1 0 0 1 
+
 State Machine - |DC_final|exp09:vga|status
 Name status.11 status.10 status.01 status.00 
 status.00 0 0 0 0 

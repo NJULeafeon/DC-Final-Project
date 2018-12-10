@@ -1,5 +1,5 @@
 Flow report for DC_final
-Thu Dec 06 10:31:25 2018
+Mon Dec 10 11:31:53 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Dec 06 10:31:11 2018       ;
+; Flow Status                     ; Successful - Mon Dec 10 11:31:20 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DC_final                                    ;
 ; Top-level Entity Name           ; DC_final                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 898 / 41,910 ( 2 % )                        ;
-; Total registers                 ; 509                                         ;
+; Logic utilization (in ALMs)     ; 2,678 / 41,910 ( 6 % )                      ;
+; Total registers                 ; 1111                                        ;
 ; Total pins                      ; 168 / 499 ( 34 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 72,616 / 5,662,720 ( 1 % )                  ;
+; Total block memory bits         ; 106,016 / 5,662,720 ( 2 % )                 ;
 ; Total DSP Blocks                ; 1 / 112 ( < 1 % )                           ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                               ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                              ;
+; Total PLLs                      ; 1 / 15 ( 7 % )                              ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/06/2018 10:29:17 ;
+; Start date & time ; 12/10/2018 11:27:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DC_final            ;
 +-------------------+---------------------+
@@ -78,9 +78,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 238338860412706.154406335615264        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 235765480881867.154441244919324        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; rom_game_over_bb.v                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,11 +95,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:20     ; 1.0                     ; 4860 MB             ; 00:00:40                           ;
-; Fitter                    ; 00:01:21     ; 1.0                     ; 6340 MB             ; 00:02:29                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 4867 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:13     ; 1.2                     ; 5185 MB             ; 00:00:15                           ;
-; Total                     ; 00:02:03     ; --                      ; --                  ; 00:03:33                           ;
+; Analysis & Synthesis      ; 00:00:50     ; 1.0                     ; 4929 MB             ; 00:01:14                           ;
+; Fitter                    ; 00:02:29     ; 1.1                     ; 6734 MB             ; 00:05:20                           ;
+; Assembler                 ; 00:00:24     ; 1.0                     ; 4890 MB             ; 00:00:24                           ;
+; TimeQuest Timing Analyzer ; 00:00:31     ; 1.9                     ; 5266 MB             ; 00:00:53                           ;
+; Total                     ; 00:04:14     ; --                      ; --                  ; 00:07:51                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +108,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; LAPTOP-4IBJ6H3F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; LAPTOP-4IBJ6H3F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; LAPTOP-4IBJ6H3F  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; LAPTOP-4IBJ6H3F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-M14OPSR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-M14OPSR  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-M14OPSR  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-M14OPSR  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

@@ -1,0 +1,68 @@
+module exp08(clk,clrn,ps2_clk,ps2_data,light3h,light3l,light2h,light2l,lighth,lightl,light_enable);
+	input clk,clrn,ps2_clk,ps2_data;
+	output [6:0] light3h,light3l,light2h,light2l,lighth,lightl;
+	reg true = 1;
+	reg [7:0] data_count = 0;
+	reg nextdata = 0;
+	output reg light_enable = 1;
+	reg flag = 1;
+	reg CapsLock = 0;
+	wire ready,overflow;
+	wire [7:0] code,ascii; 
+	reg [7:0] code_reg;
+	
+	ps2_keyboard p(.clk(clk),.clrn(clrn),.ps2_clk(ps2_clk),.ps2_data(ps2_data),.data(code),.ready(ready),.nextdata_n(nextdata),.overflow(overflow));
+	
+	ram r(.in(code_reg),.out(ascii),.CapsLock(CapsLock));
+	
+	light l3(.data(data_count),.out_h(light3h),.out_l(light3l),.enable(true));
+	light l2(.data(ascii),.out_h(light2h),.out_l(light2l),.enable(light_enable));
+	light l(.data(code_reg),.out_h(lighth),.out_l(lightl),.enable(light_enable));
+
+	//clk_ls为原时钟周期的50倍
+	reg [6:0] count_clk = 0;
+	reg clk_ls = 0;
+	always @ (posedge clk)
+	begin
+		if(count_clk == 50)
+		begin
+			count_clk <= 0;
+			clk_ls <= ~clk_ls;
+		end
+		else
+			count_clk <= count_clk + 1;
+	end
+	
+	
+	
+	always @ (posedge clk_ls)
+	begin
+		if(ready) 
+		begin
+			nextdata <= 0;
+			code_reg <= code;
+			if(code == 8'hf0)
+			begin
+				data_count <= data_count + 1;
+				flag <= 1;  //因为f0输出后还会增加一个通码，这会导致light_enable恢复到1
+			end
+			else
+			begin
+				if(flag) 
+				begin
+					light_enable <= 0;
+					flag <= 0;
+					if(code == 8'h58) CapsLock = ~CapsLock;
+				end
+				else
+				begin
+					light_enable <= 1;
+				end	
+			end
+			
+		end
+		else nextdata <= 1;
+	end
+	
+	
+endmodule
